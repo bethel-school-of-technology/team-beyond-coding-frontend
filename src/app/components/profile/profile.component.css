@@ -2,13 +2,14 @@
 .mock-nav {
   display:flex;
   justify-content:center;
-  background-color: gray;
+  background-color: #c3cfd9;
   height: 50px;
 }
 /* ------------------------------------ */
 
 .profile-container {
-  width: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .user-pic {
@@ -43,7 +44,7 @@
   flex-direction: column;
   justify-content: start;
   height: 100%;
-  padding-right: 5px;
+  
 }
 
 .txtntoggle {
@@ -52,12 +53,13 @@
   align-items: end;
   border: 3px solid gray;
   border-top: none;
-  border-bottom: none;
-  padding:0 5px 0px 30px;
+  
+  padding:0 5px 0px 10px;
   margin: 0 5px 0 5px;
 }
 
 .toggle {
+  padding-right: 5px;
   padding-bottom: 5px;
 }
 
@@ -122,7 +124,19 @@ input:checked + .slider:before {
 }
 
 .user-info {
+  background-color: #e0e6ec;
   border: 3px solid gray;
-  margin:0 5px 0 5px;
- 
+  margin: 12px 5px 0 5px;
+  padding: 10px;
 }
+
+.info-sec-title {
+  padding-left: 6px;
+}
+
+.info-fn {
+  border: 1px solid #434e61;
+  background-color: white;
+  padding: 5px;
+}
+
