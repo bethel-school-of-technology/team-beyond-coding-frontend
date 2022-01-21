@@ -126,6 +126,7 @@ input:checked + .slider:before {
 .user-info {
   background-color: #e0e6ec;
   border: 3px solid gray;
+  border-bottom: none;
   margin: 12px 5px 0 5px;
   padding: 10px;
 }
@@ -134,9 +135,89 @@ input:checked + .slider:before {
   padding-left: 6px;
 }
 
+
 .info-fn {
   border: 1px solid #434e61;
   background-color: white;
   padding: 5px;
 }
 
+.info-sec2 {
+  display: flex;
+  padding: 5px 0;
+}
+
+.info-cty {
+  border: 1px solid #434e61;
+  background-color: white;
+  padding: 5px;
+  width: 180px;
+}
+
+.state-container {
+  padding-left: 26px;
+}
+
+.info-state {
+  border: 1px solid #434e61;
+  background-color: white;
+  padding: 5px;
+  width: 148px;
+}
+
+.info-sec3 {
+  display: flex;
+  padding: 5px 0;
+}
+
+.info-bir {
+  border: 1px solid #434e61;
+  background-color: white;
+  padding: 5px;
+  width: 55px;
+}
+
+.email-container {
+  padding-left: 26px;
+}
+
+.info-eml {
+  border: 1px solid #434e61;
+  background-color: white;
+  padding: 5px;
+  width: 272px;
+}
+
+.sec-border {
+  background-color: #c3cfd9;
+  border: 3px solid gray;
+  margin: 0 5px;
+  height: 12px;
+}
+
+.garage-container {
+  background-color: #e0e6ec;
+  border: 3px solid gray;
+  border-top: none;
+  margin:  0 5px;
+  padding: 10px;
+}
+
+.about-container {
+  background-color: #e0e6ec;
+  border: 3px solid gray;
+  margin: 12px 5px 0 5px;
+  padding: 10px;
+}
+
+.txt-area {
+  padding: 5px;
+  width: 366px;
+  height: 180px;
+}
+
+.inner-garage-container {
+  background-color: white;
+  width: 380px;
+  height: 180px;
+}
