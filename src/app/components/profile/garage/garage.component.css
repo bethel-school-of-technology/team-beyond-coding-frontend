@@ -1,0 +1,37 @@
+
+.garage-container {
+  padding: 5px;
+}
+
+.biketabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 380px;
+    
+}
+.biketabs input[type="radio"] {
+  display: none;
+}
+.biketabs label {
+  padding: 5px;
+  background: var(--darkgreen1);
+  font-weight: bold;
+}
+
+.biketabs .tab {
+  width: 380px;
+  padding: 2px;
+  background: var(--highlight);
+  /* order makes the tabs be by each other */
+  order: 1;
+  display: none;
+}
+
+ /* this has to go in a specific order to work correctly */
+.biketabs input[type='radio']:checked + label + .tab {
+  display: block;
+}
+
+.biketabs input[type="radio"]:checked + label {
+  background: var(--highlight);
+}

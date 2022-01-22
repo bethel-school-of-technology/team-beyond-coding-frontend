@@ -10,9 +10,9 @@
         </div>
         <div class="username-id">
             <!-- --------user Username---------- -->
-            <p class="username">Username</p>
+            <p class="username">{{UserName}}</p>
             <!-- --------user Id--------- --->
-            <p class="id">User_ID: XX</p>
+            <p class="id">User_ID: {{UserId}}</p>
         </div>
         
         <div class="setting">
@@ -35,26 +35,26 @@
         <!-- --------user personal info---------- -->
         <div class="info-sec1">
             <p class="info-sec-title">Full Name</p>
-            <p class="info-fn">Placeholder</p>
+            <p class="info-fn">{{FullName}}</p>
         </div>
         <div class="info-sec2">
             <div>
                 <p class="info-sec-title">City</p>
-                <p class="info-cty">Placeholder</p>  
+                <p class="info-cty">{{City}}</p>  
             </div>
             <div class="state-container">
                 <p class="info-sec-title">State</p>
-                <p class="info-state">Placeholder</p>
+                <p class="info-state">{{State}}</p>
             </div>
         </div>
         <div class="info-sec3">
             <div>
                 <p class="info-sec-title">Birthday</p>
-                <p class="info-bir">01/2345</p>
+                <p class="info-bir">{{Birthday}}</p>
             </div>
             <div class="email-container">
                 <p class="info-sec-title">Email</p>
-                <p class="info-eml">Placeholder</p>
+                <p class="info-eml">{{Email}}</p>
             </div>
         </div>
     </div>
@@ -64,7 +64,7 @@
     <div class="garage-container">
         <p>Garage</p>
         <div class="inner-garage-container">
-            
+            <app-garage></app-garage>
         </div>
     </div>
     <!-- --------user about section---------- -->
@@ -78,7 +78,7 @@
     </div>
     <!-- --------user gallery---------- -->
     <div class="gallery">
-
+        
     </div>
 </div>
 
