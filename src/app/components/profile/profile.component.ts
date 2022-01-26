@@ -11,6 +11,15 @@ import { faUsersCog } from '@fortawesome/free-solid-svg-icons';
 export class ProfileComponent implements OnInit {
   faUserCircle = faUserCircle;
   faUsersCog = faUsersCog;
+
+  UserName = "Username"
+  UserId = "00"
+  FullName = 'Placeholder';
+  City = 'Placeholder';
+  State = 'Placeholder';
+  Birthday = '12/3456';
+  Email = 'Placeholder';
+
   constructor() {}
 
   ngOnInit(): void {}
