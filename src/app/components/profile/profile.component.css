@@ -1,38 +1,36 @@
 
 
-/* background-color: var(--darkgreen); */
-
-
 /* ----replace with actual nav bar---- */
 .mock-nav {
-  display:flex;
-  justify-content:center;
   background-color: #c3cfd9;
   height: 50px;
 }
-/* ------------------------------------ */
+
+/* ----Avatar box---- */
 
 .profile-container {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   background-color: var(--darkgreen3);
+  width: 100%;
 }
 
 .user-pic {
   background-color: var(--darkgreen1);
   display:flex;
-  align-items: center;
-  justify-content: center;
   height: 200px;
-  padding: 10px;
+  padding: 10px 0;
   border: 3px solid var(--highlight);
   border-bottom: none;
-  margin: 5px 5px 0 5px;
 }
 
 .avatar-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding-top: 25px;
+  padding-left: 15px;
   height: 160px;
   width: 180px;
 }
@@ -40,18 +38,20 @@
   font-size: 12px;
 }
 
+.user-setting-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 10px;
+}
+
 .username-id {
-  min-width: 160px;
+  padding-top: 3em;
   padding-left: 10px;
-  padding-bottom: 60px;
 }
 
 .setting {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  height: 100%;
-  
+  padding-bottom: 55px;
 }
 
 .txtntoggle {
@@ -62,7 +62,7 @@
   border-top: none;
   background-color: var(--darkgreen1);
   padding:0 5px 0px 10px;
-  margin: 0 5px 0 5px;
+  margin-bottom: 12px
 }
 
 .toggle {
@@ -129,19 +129,18 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-
+/* ----------Account details-------- */
 .user-info {
   background-color: var(--darkgreen1);
   border: 3px solid var(--highlight);
-  border-bottom: none;
-  margin: 12px 5px 0 5px;
-  padding: 10px;
+  padding: 20px;
+  width: 100%;
+  margin-bottom: 12px;
 }
 
 .info-sec-title {
-  padding-left: 6px;
+  padding-left: 2px;
 }
-
 
 .info-fn {
   border: 1px solid var(--highlight);
@@ -149,82 +148,293 @@ input:checked + .slider:before {
   padding: 5px;
 }
 
+.info-sec1 {
+  width: 100%;
+}
+
 .info-sec2 {
-  display: flex;
-  padding: 5px 0;
+  display:flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 10px;
+}
+.city-container {
+  width: 100%;
 }
 
 .info-cty {
   border: 1px solid var(--highlight);
   background-color: white;
   padding: 5px;
-  width: 180px;
+  width: 100%;
 }
 
 .state-container {
   padding-left: 26px;
+  width: 100%;
 }
 
 .info-state {
   border: 1px solid var(--highlight);
   background-color: white;
   padding: 5px;
-  width: 148px;
 }
 
 .info-sec3 {
   display: flex;
-  padding: 5px 0;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.birthday-container {
+  width: 25%;
 }
 
 .info-bir {
   border: 1px solid var(--highlight);
   background-color: white;
   padding: 5px;
-  width: 55px;
+  
 }
 
 .email-container {
   padding-left: 26px;
+  width: 80%;
 }
 
 .info-eml {
   border: 1px solid var(--highlight);
   background-color: white;
   padding: 5px;
-  width: 272px;
 }
 
-.sec-border {
-  background-color: var(--darkgreen2);
-  border: 3px solid var(--highlight);
-  margin: 0 5px;
-  height: 12px;
-}
 
+/* ----Garage---- */
 .garage-container {
   background-color: var(--darkgreen1);
   border: 3px solid var(--highlight);
-  border-top: none;
-  margin:  0 5px;
-  padding: 10px;
+  padding: 15px;
+  width: 100%;
+  margin-bottom: 12px
+}
+.garage-title {
+  padding-bottom: 10px;
+}
+.inner-garage-container {
+  background-color: white;
+  padding: 5px;
+  width: 100%;
+  height: 180px;
 }
 
+/* --------About me -------- */
 .about-container {
   background-color: var(--darkgreen1);
   border: 3px solid var(--highlight);
-  margin: 12px 5px 0 5px;
-  padding: 10px;
+  padding:15px;
+  width: 100%;
+  margin-bottom: 12px
+}
+
+.about-sec-title {
+  padding-bottom: 10px;
 }
 
 .txt-area {
   padding: 5px;
-  width: 366px;
+  width: 100%;
   height: 180px;
 }
 
-.inner-garage-container {
-  background-color: white;
-  width: 380px;
+/* -----Gallery------ */
+.gallery {
+  text-align: start;
+  background-color: var(--darkgreen1);
+  border: 3px solid var(--highlight);
+  padding: 10px;
+}
+
+.inner-gal-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 15px;
+}
+
+.img-gal  {
+  width: 180px;
   height: 180px;
+  margin: 1px;
+  border: 2px solid black;
+}
+
+@media screen and (min-width: 768px){
+  * {
+    font-size: 16px;
+  }
+  .wrap-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  /* ----Avatar container---- */
+  .username {
+    font-size: 24px;
+  }
+  
+  .user-id {
+    font-size: 20px;
+    padding-left: 2px;
+  }
+  /* -----Account details---- */
+  
+  .user-info {
+    width: 100%;
+    padding:30px 15px;
+  }
+
+  .info-sec1{
+    width: 100%;
+  }
+  
+  .info-sec2-3 {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+  }
+  
+  .state-container {
+    padding-left: 10px;
+  }
+  .birthday-container {
+    padding-left: 10px;
+  }
+  
+  .email-container {
+    padding-left: 10px;
+  }
+
+  /* ----Garage---- */
+
+  .garage-container {
+    border: 3px solid var(--highlight);
+    width: 49%;
+    margin-right: 1%;
+  }
+  .inner-garage-container {
+    width: 100%;
+    height: 220px;
+  }
+  /* --------About me -------- */
+  .about-container {
+    border: 3px solid var(--highlight);
+    width: 49%;
+    margin-left: 1%;
+  }
+  .txt-area {
+    width: 100%;
+    height: 220px;
+  }
+  /* -----Gallery------ */
+  .gallery {
+    width: 100%;
+  }
+  .img-gal {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+
+@media screen and (min-width: 1020px){
+  *{
+    font-size: 18px;
+  }
+  /*----avatar container----*/
+  .avatar-container {
+    padding-top: 25px;
+    padding-left: 30px;
+  }
+  .username {
+    font-size: 34px;
+    padding-left: 30px;
+  }
+  .user-id {
+    font-size: 20px;
+    padding-left: 33px;
+  }
+  /*----account details----*/
+  .user-info {
+    width: 39.5%;
+    height: 280px;
+    margin-right: .5%;
+  }
+  .info-sec2-3 {
+    display: block;
+    padding-top:0;
+  }
+  .info-sec2 {
+    padding-top: 20px;    
+  }
+  .info-sec3 {
+    padding-top: 20px;
+  }
+  .birthday-container {
+    padding-left: 0;
+  }
+  
+  /*----garage container------*/
+  .garage-container {
+    width: 59.5%;
+    margin-left: .5%;
+    margin-right: 0;
+    height: 280px;
+  }
+  .inner-garage-container{
+    height: 83%;
+    width: 100%;
+  }
+  
+  /*----about container----*/
+  .about-container{
+    width: 39.5%;
+    margin-left: 0;
+    margin-right: .5%;
+    height: 325px;
+  }
+  .txt-area {
+    width: 95%;
+    height: 255px;
+  }
+  
+  /*---- Gallery container----*/
+
+  .gallery {
+    width: 59.5%;
+    padding-bottom: 30px;
+    margin-left: .5%;
+    height: 325px;
+  }
+  .a-gallery {
+    padding-left: 20px;
+    text-align: start;
+  }
+  .inner-gal-container{
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    padding-left: 5%;
+  }
+  .img-gal {
+    height: 120px;
+    width: 120px;
+  }
+  
+}
+@media screen and (min-width: 1020px){
+  .inner-gal-container{
+    padding-left: 8%;
+  }
 }

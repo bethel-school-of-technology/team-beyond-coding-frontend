@@ -1,37 +1,37 @@
-
-.garage-container {
-  padding: 5px;
+.bike-tabs ul {
+    padding: 10px;
+    background-color: blue;
+    display: inline-block;
+    border-radius: 2px;
+    margin: 0;
 }
-
-.biketabs {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 380px;
-    
+.bike-tab {
+    display: inline-block;
+    list-style-type: none;
+    border-right: 2px solid purple;
+    color: red;
+    font-size: 16px;
+    padding: 0 10px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
 }
-.biketabs input[type="radio"] {
-  display: none;
+.bike-tab ul li:last-child {
+    border-right: none;
 }
-.biketabs label {
-  padding: 5px;
-  background: var(--darkgreen1);
-  font-weight: bold;
+.bike-tab ul li:hover {
+    color:green;
 }
-
-.biketabs .tab {
-  width: 380px;
-  padding: 2px;
-  background: var(--highlight);
-  /* order makes the tabs be by each other */
-  order: 1;
-  display: none;
+.color {
+    color: green;
 }
-
- /* this has to go in a specific order to work correctly */
-.biketabs input[type='radio']:checked + label + .tab {
-  display: block;
+.content {
+    background-color: blue;
+    padding: 20px;
+    border-bottom: 1px solid white;    
 }
-
-.biketabs input[type="radio"]:checked + label {
-  background: var(--highlight);
+.content-value h2 {
+    font-size: 22px;
+    font-weight: 600;
 }

@@ -1,0 +1,32 @@
+{
+  "bikes": [
+    {
+      "type": "Sportbike",
+      "make": "china",
+      "model": "cheap",
+      "engineSize": "small",
+      "id": 1
+    },
+    {
+      "type": "Cruiser",
+      "make": "asda",
+      "engineSize": "slow",
+      "model": "asdasd",
+      "id": 2
+    },
+    {
+      "type": "Cruiser",
+      "make": "asda",
+      "model": "cheap",
+      "engineSize": "slow",
+      "id": 3
+    },
+    {
+      "make": "dadasd",
+      "model": "asdad",
+      "type": "Dresser",
+      "engineSize": "adsa",
+      "id": 4
+    }
+  ]
+}
