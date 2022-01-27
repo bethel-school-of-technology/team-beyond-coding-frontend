@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { faMotorcycle } from '@fortawesome/free-solid-svg-icons';
 
 import { Bike } from 'src/app/models/bike/bike';
+import { BikeService } from 'src/app/services/bike.service';
 
 @Component({
   selector: 'app-garage',
@@ -11,18 +14,19 @@ import { Bike } from 'src/app/models/bike/bike';
 export class GarageComponent implements OnInit {
   faMotorcycle = faMotorcycle;
 
-  Id: number = 0;
-  Make: any = 'placeholder';
-  Model: any = 'placeholder';
-  TopSpeed: any = 'placeholder';
-  Engine: any = 'placeholder';
+  bikeList: Bike[] = [];
 
-  newBike: Bike = new Bike()
-  constructor() {}
+  constructor(private myBikeService: BikeService, private router: Router) {}
 
-  ngOnInit(): void {}
-
-  addBike(){
-    this
+  ngOnInit(): void {
+    this.myBikeService.getAllBikes().subscribe((response) => {
+      console.log(response);
+      this.bikeList = response;
+    });
+  }
+  id: any = 'tab';
+  tabChange(ids: any) {
+    this.id = ids;
+    console.log(this.id);
   }
 }
