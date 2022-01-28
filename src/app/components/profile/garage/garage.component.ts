@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+
 
 import { faMotorcycle } from '@fortawesome/free-solid-svg-icons';
 
@@ -13,20 +14,30 @@ import { BikeService } from 'src/app/services/bike.service';
 })
 export class GarageComponent implements OnInit {
   faMotorcycle = faMotorcycle;
-
   bikeList: Bike[] = [];
+  bikeID: any;
+  
 
-  constructor(private myBikeService: BikeService, private router: Router) {}
+  constructor(
+    private actRoute: ActivatedRoute,
+    private myBikeService: BikeService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.myBikeService.getAllBikes().subscribe((response) => {
       console.log(response);
       this.bikeList = response;
     });
+    this.actRoute.firstChild.params.subscribe((response) => {
+      console.log(response)});
+      
+
   }
-  id: any = 'tab';
-  tabChange(ids: any) {
-    this.id = ids;
-    console.log(this.id);
+
+
+  Reload() {
+    console.log(this.bikeID)
+    this.router.navigate(['/garage/bike/', this.bikeID]);
   }
 }

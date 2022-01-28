@@ -1,15 +1,17 @@
-.bike-tabs ul {
-    padding: 10px;
-    background-color: blue;
+.bike-tab ul {
+    padding: 5px;
+    background-color: gray;
     display: inline-block;
     border-radius: 2px;
+    border: 1px solid gray;
+    border-bottom: none;
     margin: 0;
 }
-.bike-tab {
+.bike-tab ul li {
     display: inline-block;
     list-style-type: none;
-    border-right: 2px solid purple;
-    color: red;
+    border-right: 2px solid rgb(236, 230, 236);
+    color: black;
     font-size: 16px;
     padding: 0 10px;
     font-weight: 600;
@@ -21,17 +23,42 @@
     border-right: none;
 }
 .bike-tab ul li:hover {
-    color:green;
+    color:rgb(29, 195, 29);
 }
 .color {
-    color: green;
+    color: rgb(36, 214, 36);
 }
 .content {
-    background-color: blue;
-    padding: 20px;
+    background-color: gray;
+    padding: 10px;
     border-bottom: 1px solid white;    
 }
-.content-value h2 {
-    font-size: 22px;
-    font-weight: 600;
+
+/* .mytabs {
+    display: flex;
+    justify-content: start;
 }
+.mytabs input[type="radio"] {
+    display: none;
+}
+.mytabs label {
+    padding: 5px 15px;
+    background: #e2e2e2;
+    font-weight: bold;
+}
+
+.mytabs .tab {
+    padding-top: 5px;
+    width: 100%;
+    background: gray;
+    order: 1;
+    display: none;
+}
+
+.mytabs input[type='radio']:checked + label + .tab {
+    display: flex;
+}
+
+.mytabs input[type="radio"]:checked + label {
+    background: rgb(231, 179, 179);
+} */

@@ -1,21 +1,27 @@
-
-<div class="bikes-container">
-    <ul class="bike-tabs">
-        <li *ngFor="let bike of bikeList" class="bike-tab">
-            <input type="radio" id="tab{{bike.id}}" name="biketabs" checked="checked" >
+<!-- <div class="bikes-container">
+    <div class="mytabs">
+        <div *ngFor="let bike of bikeList">
+            <input type="radio" id="tab{{bike.id}}" name="mytabs" >
             <label for="tab{{bike.id}}"><fa-icon [icon]="faMotorcycle" size="1x" class="bike-icon "></fa-icon> {{bike.id}}</label>
-        </li> 
-    </ul>
-</div>
-<!-- <div class="content" *ngFor="let bike of bikeList">
-    <div class="content-value" >
-        <h4>Type</h4>
-        <p class="bike-tps">{{bike.type}}</p>
-        <h4>Make</h4>
-        <p class="bike-mk">{{bike.make}}</p>
-        <h4>Model</h4>
-        <p class="bike-mdl">{{bike.model}}</p>
-        <h4>Engine Size</h4>
-        <p class="bike-eng">{{bike.engineSize}}</p> 
+            <div class="tab">
+                <h4>Type</h4>
+                <p class="bike-tps">{{bike.type}}</p>
+                <h4>Make</h4>
+                <p class="bike-mk">{{bike.make}}</p>
+                <h4>Model</h4>
+                <p class="bike-mdl">{{bike.model}}</p>
+                <h4>Engine Size</h4>
+                <p class="bike-eng">{{bike.engineSize}}</p> 
+            </div>    
+        </div>
     </div>
 </div> -->
+<div class="bikes-container">
+    <div class="bike-tab">  
+        <ul>
+            <li *ngFor="let bike of bikeList" id="tab{{bike.id}}" routerLink="/garage/bike/{{bike.id}}" (click)="Reload()"><fa-icon [icon]="faMotorcycle" size="1x" class="bike-icon "></fa-icon> {{bike.id}}</li> 
+        </ul>
+    </div>    
+</div>
+
+<router-outlet></router-outlet>
