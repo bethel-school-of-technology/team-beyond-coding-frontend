@@ -1,0 +1,18 @@
+{
+  "bikes": [
+    {
+      "type": "Sportbike",
+      "make": "china",
+      "model": "cheap",
+      "engineSize": "1",
+      "id": 1
+    },
+    {
+      "type": "Scrambler",
+      "make": "peru",
+      "model": "cheap",
+      "engineSize": "2",
+      "id": 2
+    }
+  ]
+}

@@ -1,37 +1,64 @@
-
-.garage-container {
-  padding: 5px;
+.bike-tab ul {
+    padding: 5px;
+    background-color: gray;
+    display: inline-block;
+    border-radius: 2px;
+    border: 1px solid gray;
+    border-bottom: none;
+    margin: 0;
+}
+.bike-tab ul li {
+    display: inline-block;
+    list-style-type: none;
+    border-right: 2px solid rgb(236, 230, 236);
+    color: black;
+    font-size: 16px;
+    padding: 0 10px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+}
+.bike-tab ul li:last-child {
+    border-right: none;
+}
+.bike-tab ul li:hover {
+    color:rgb(29, 195, 29);
+}
+.color {
+    color: rgb(36, 214, 36);
+}
+.content {
+    background-color: gray;
+    padding: 10px;
+    border-bottom: 1px solid white;    
 }
 
-.biketabs {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 380px;
-    
+/* .mytabs {
+    display: flex;
+    justify-content: start;
 }
-.biketabs input[type="radio"] {
-  display: none;
+.mytabs input[type="radio"] {
+    display: none;
 }
-.biketabs label {
-  padding: 5px;
-  background: var(--darkgreen1);
-  font-weight: bold;
+.mytabs label {
+    padding: 5px 15px;
+    background: #e2e2e2;
+    font-weight: bold;
 }
 
-.biketabs .tab {
-  width: 380px;
-  padding: 2px;
-  background: var(--highlight);
-  /* order makes the tabs be by each other */
-  order: 1;
-  display: none;
+.mytabs .tab {
+    padding-top: 5px;
+    width: 100%;
+    background: gray;
+    order: 1;
+    display: none;
 }
 
- /* this has to go in a specific order to work correctly */
-.biketabs input[type='radio']:checked + label + .tab {
-  display: block;
+.mytabs input[type='radio']:checked + label + .tab {
+    display: flex;
 }
 
-.biketabs input[type="radio"]:checked + label {
-  background: var(--highlight);
-}
+.mytabs input[type="radio"]:checked + label {
+    background: rgb(231, 179, 179);
+} */

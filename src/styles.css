@@ -1,4 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
-* {
-    margin: 0;
+:root {
+  --darkgreen1: #7E9966;
+  --darkgreen2: #253519;
+  --darkgreen3: #171E10;
+  --highlight: #9BFF4F;
 }
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

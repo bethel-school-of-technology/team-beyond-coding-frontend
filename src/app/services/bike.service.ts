@@ -14,7 +14,9 @@ export class BikeService {
   getAllBikes(): Observable<Bike[]> {
     return this.http.get<Bike[]>(this.myBikeURL);
   }
-
+  getOneBike(reqID: number): Observable<Bike> {
+    return this.http.get<Bike>(`${this.myBikeURL}/${reqID}`);
+  }
   addBike(newBike: Bike): Observable<Bike> {
     return this.http.post<Bike>(this.myBikeURL, newBike);
   }

@@ -1,0 +1,37 @@
+<div class="Bikes">
+    <form (ngSubmit)="addBike()">
+        <label for="Type">Type: </label>
+        <select id="Type" name="Type" [(ngModel)]="newBike.type">
+            <option value="Sportbike" selected>Sportbike</option>
+            <option value="Cruiser" >Cruiser</option>
+            <option value="Dual-sport" >Dual-sport</option>
+            <option value="Dresser" >Dresser</option>
+            <option value="Sport-Tourer" >Sport-Tourer</option>
+            <option value="Scooter" >Scooter</option>
+            <option value="Standard" >Standard</option>
+            <option value="Dirt Bike" >Dirt Bike</option>
+            <option value="Electric" >Electric</option>
+            <option value="Hyperbike" >Hyperbike</option>
+            <option value="Motard" >Motard</option>
+            <option value="Minibike" >Minibike</option>
+            <option value="Streetfighter" >Streetfighter</option>
+            <option value="Chopper" >Chopper</option>
+            <option value="Bobber" >Bobber</option>
+            <option value="Bagger" >Bagger</option>
+            <option value="Vintage" >Vintage</option>
+            <option value="300-Class" >300-Class</option>
+            <option value="Scrambler" >Scrambler</option>
+        </select>    
+        <br>
+        <label>Make: </label>
+        <input type="text" name="Make" [(ngModel)]="newBike.make">
+        <br>
+        <label>Model: </label>
+        <input type="text" name="Model" [(ngModel)]="newBike.model">
+        <br>
+        <label>Engine Size: </label>
+        <input type="text" name="EngineSize" [(ngModel)]="newBike.engineSize">
+        <button class="btn" type="submit">Save Bike</button>
+    </form>
+</div>
+

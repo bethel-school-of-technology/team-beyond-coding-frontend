@@ -1,49 +1,9 @@
-<div class="garage-container">
-    <div class="biketabs">
-        <!-- <input type="radio" id="tab1" name="biketabs" checked="checked" >
-        <label for="tab1"><fa-icon [icon]="faMotorcycle" size="1x" class="bike-icon "></fa-icon>Bike 1</label>
-        <div class="tab">
-            <div>
-                <p class="info-sec-title">Make</p>
-                <p class="bike-mk">{{Make}}</p>
-            </div>
-            <div>
-                <p class="info-sec-title">Model</p>
-                <p class="bike-mdl">{{Model}}</p>  
-            </div>
-            <div class="state-container">
-                <p class="info-sec-title">Top Speed</p>
-                <p class="bike-tps">{{TopSpeed}}</p>
-            </div>
-            <div>
-                <p class="info-sec-title">Engine</p>
-                <p class="bike-eng">{{Engine}}</p>
-            </div>
-            <p>test1</p>
-        </div>
 
-        <input type="radio" id="tab2" name="biketabs">
-        <label for="tab2"><fa-icon [icon]="faMotorcycle" size="1x" class="bike-icon "></fa-icon>Bike 2</label>
-        <div class="tab">
-            <div>
-                <p class="info-sec-title">Make</p>
-                <p class="bike-mk">{{Make}}</p>
-            </div>
-            <div>
-                <p class="info-sec-title">Model</p>
-                <p class="bike-mdl">{{Model}}</p>  
-            </div>
-            <div class="state-container">
-                <p class="info-sec-title">Top Speed</p>
-                <p class="bike-tps">{{TopSpeed}}</p>
-            </div>
-            <div>
-                <p class="info-sec-title">Engine</p>
-                <p class="bike-eng">{{Engine}}</p>
-            </div>
-            <p>test2</p>
-        </div> -->
-
-        <button >Add Bike</button>   
-    </div>
+<div class="bikes-container">
+    <div class="bike-tab">  
+        <ul>
+            <li *ngFor="let bike of bikeList" id="tab{{bike.id}}" routerLink="/profile/bike/{{bike.id}}" ><fa-icon [icon]="faMotorcycle" size="1x" class="bike-icon "></fa-icon> {{bike.id}}</li> 
+        </ul>
+    </div>    
 </div>
+<router-outlet></router-outlet>
