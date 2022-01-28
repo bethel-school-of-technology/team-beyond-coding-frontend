@@ -222,7 +222,8 @@ input:checked + .slider:before {
 }
 .inner-garage-container {
   background-color: white;
-  padding: 5px;
+  border-radius: 3px;
+  /* padding-top: 5px; */
   width: 100%;
   height: 180px;
 }

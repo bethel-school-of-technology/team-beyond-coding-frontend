@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { GarageComponent } from './components/profile/garage/garage.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AddbikeComponent } from './components/profile/garage/addbike/addbike.component';
+import { ViewbikeComponent } from './components/profile/garage/viewbike/viewbike.component';
 
 
 const routes: Routes = [
@@ -14,15 +15,9 @@ const routes: Routes = [
         path: 'addbike',
         component: AddbikeComponent,
       },
-    ],
-  },
-  {
-    path: 'garage',
-    component: GarageComponent,
-    children: [
       {
-        path: 'addbike',
-        component: AddbikeComponent,
+        path: 'bike/:bikeID',
+        component: ViewbikeComponent,
       },
     ],
   },
@@ -33,3 +28,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+

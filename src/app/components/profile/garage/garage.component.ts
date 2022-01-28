@@ -15,8 +15,7 @@ import { BikeService } from 'src/app/services/bike.service';
 export class GarageComponent implements OnInit {
   faMotorcycle = faMotorcycle;
   bikeList: Bike[] = [];
-  bikeID: any;
-  
+  bikeID: number;
 
   constructor(
     private actRoute: ActivatedRoute,
@@ -29,15 +28,11 @@ export class GarageComponent implements OnInit {
       console.log(response);
       this.bikeList = response;
     });
-    this.actRoute.firstChild.params.subscribe((response) => {
-      console.log(response)});
-      
-
+    // this.actRoute.firstChild.params.subscribe((response) => {
+    //   console.log(response)});
   }
-
-
-  Reload() {
+  checkid($event){
+    this.bikeID = $event
     console.log(this.bikeID)
-    this.router.navigate(['/garage/bike/', this.bikeID]);
   }
 }

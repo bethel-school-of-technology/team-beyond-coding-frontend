@@ -1,6 +1,6 @@
 <div class="bike-profile">
-    <div class="content">
-        <div class="content-value" id="tab{{currentBike.id}}">
+    <div class="content" >
+        <div class="content-value" id="{{currentBike.id}}">
             <h4>Type</h4>
             <p class="bike-tps">{{currentBike.type}}</p>
             <h4>Make</h4>
@@ -11,5 +11,5 @@
             <p class="bike-eng">{{currentBike.engineSize}}</p> 
         </div>
     </div>
-    <button type="button" (click)="check()">console.log</button>
+    <button type="button" (click)="sendNumber()"> save </button>
 </div>

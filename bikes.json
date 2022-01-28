@@ -4,29 +4,15 @@
       "type": "Sportbike",
       "make": "china",
       "model": "cheap",
-      "engineSize": "small",
+      "engineSize": "1",
       "id": 1
     },
     {
-      "type": "Cruiser",
-      "make": "asda",
-      "engineSize": "slow",
-      "model": "asdasd",
-      "id": 2
-    },
-    {
-      "type": "Cruiser",
-      "make": "asda",
+      "type": "Scrambler",
+      "make": "peru",
       "model": "cheap",
-      "engineSize": "slow",
-      "id": 3
-    },
-    {
-      "make": "dadasd",
-      "model": "asdad",
-      "type": "Dresser",
-      "engineSize": "adsa",
-      "id": 4
+      "engineSize": "2",
+      "id": 2
     }
   ]
 }
