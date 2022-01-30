@@ -21,13 +21,19 @@ export class ViewbikeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.bikeID = parseInt(this.actRoute.snapshot.paramMap.get('bikeID'));
+   // this.bikeID = parseInt(this.actRoute.snapshot.paramMap.get('bikeID'));
 
-    this.myBikeService.getOneBike(this.bikeID).subscribe((response) => {
-      this.currentBike = response;
-    });
+   this.actRoute.params.subscribe(params => {
+     this.bikeID = +params["bikeID"];
+
+         this.myBikeService.getOneBike(this.bikeID).subscribe((response) => {
+           this.currentBike = response;
+         });
+   })
+
+
   }
-  sendNumber() {
-    this.numberEvent.emit(this.bikeID)
-  }
+  // sendNumber() {
+  //   this.numberEvent.emit(this.bikeID)
+  // }
 }

@@ -2,8 +2,9 @@
 <div class="bikes-container">
     <div class="bike-tab">  
         <ul>
-            <li *ngFor="let bike of bikeList" id="tab{{bike.id}}" routerLink="/profile/bike/{{bike.id}}" ><fa-icon [icon]="faMotorcycle" size="1x" class="bike-icon "></fa-icon> {{bike.id}}</li> 
+            <li *ngFor="let bike of bikeList" id="tab{{bike.id}}" routerLink="bike/{{bike.id}}" ><fa-icon [icon]="faMotorcycle" size="1x" class="bike-icon "></fa-icon> {{bike.id}}</li> 
         </ul>
+        <button type="button" routerLink="addbike" class="add-btn">Add Bike</button>
     </div>    
 </div>
 <router-outlet></router-outlet>

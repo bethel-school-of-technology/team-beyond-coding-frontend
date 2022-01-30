@@ -13,6 +13,20 @@
       "model": "cheap",
       "engineSize": "2",
       "id": 2
+    },
+    {
+      "type": "Dirt Bike",
+      "model": "asdas",
+      "make": "dsadas",
+      "engineSize": "asdas",
+      "id": 3
+    },
+    {
+      "type": "Sport-Tourer",
+      "make": "artica",
+      "model": "ice-blue",
+      "engineSize": "medium",
+      "id": 4
     }
   ]
 }

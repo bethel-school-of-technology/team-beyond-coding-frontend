@@ -213,19 +213,17 @@ input:checked + .slider:before {
 .garage-container {
   background-color: var(--darkgreen1);
   border: 3px solid var(--highlight);
-  padding: 15px;
+  padding:15px;
   width: 100%;
-  margin-bottom: 12px
+  margin-bottom: 12px;
+  height: 300px;
 }
 .garage-title {
   padding-bottom: 10px;
 }
 .inner-garage-container {
-  background-color: white;
-  border-radius: 3px;
-  /* padding-top: 5px; */
   width: 100%;
-  height: 180px;
+  height: 220px;
 }
 
 /* --------About me -------- */
@@ -435,6 +433,13 @@ input:checked + .slider:before {
   
 }
 @media screen and (min-width: 1020px){
+  .garage-container {
+    display: flex;
+    justify-content: center;
+  }
+  .inner-garage-container {
+    padding-left: 20px;
+  }
   .inner-gal-container{
     padding-left: 8%;
   }
