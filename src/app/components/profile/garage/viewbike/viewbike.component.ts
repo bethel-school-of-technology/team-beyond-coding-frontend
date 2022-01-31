@@ -12,7 +12,6 @@ export class ViewbikeComponent implements OnInit {
   currentBike: Bike = new Bike();
 
   bikeID: number;
-  @Output() numberEvent = new EventEmitter<number>();
 
   constructor(
     private actRoute: ActivatedRoute,
@@ -21,19 +20,17 @@ export class ViewbikeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-   // this.bikeID = parseInt(this.actRoute.snapshot.paramMap.get('bikeID'));
+    this.actRoute.params.subscribe(params => {
+      this.bikeID = +params["bikeID"];
 
-   this.actRoute.params.subscribe(params => {
-     this.bikeID = +params["bikeID"];
-
-         this.myBikeService.getOneBike(this.bikeID).subscribe((response) => {
-           this.currentBike = response;
-         });
+    this.myBikeService.getOneBike(this.bikeID).subscribe((response) => {
+      this.currentBike = response;
+    });
    })
-
-
   }
-  // sendNumber() {
-  //   this.numberEvent.emit(this.bikeID)
-  // }
+  deleteBike(id: number){
+    this.myBikeService.deleteBike(id).subscribe(response => {
+      this.router.navigate(["profile"])
+    })
+  }
 }
