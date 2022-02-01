@@ -1,32 +1,18 @@
 {
   "bikes": [
     {
-      "type": "Sportbike",
-      "make": "china",
-      "model": "cheap",
-      "engineSize": "small",
+      "type": "Scrambler",
+      "make": "Sokia",
+      "model": "S87mx",
+      "engineSize": "800cc",
       "id": 1
     },
     {
-      "type": "Cruiser",
-      "make": "asda",
-      "engineSize": "slow",
-      "model": "asdasd",
-      "id": 2
-    },
-    {
-      "type": "Cruiser",
-      "make": "asda",
+      "type": "Minibike",
+      "make": "russia",
       "model": "cheap",
-      "engineSize": "slow",
-      "id": 3
-    },
-    {
-      "make": "dadasd",
-      "model": "asdad",
-      "type": "Dresser",
-      "engineSize": "adsa",
-      "id": 4
+      "engineSize": "medium",
+      "id": 2
     }
   ]
 }

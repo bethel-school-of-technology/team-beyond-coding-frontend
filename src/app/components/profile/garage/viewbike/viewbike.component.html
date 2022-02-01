@@ -1,0 +1,27 @@
+<router-outlet></router-outlet>
+<div class="bike-profile">
+    <div class="content" >
+        <div class="content-value" id="{{currentBike.id}}">
+            <div class="info-sec1">
+                <h4>Type</h4>
+                <p class="bike-info">{{currentBike.type}}</p>
+            </div>
+            <div class="info-sec2">
+                <h4>Make</h4>
+                <p class="bike-info">{{currentBike.make}}</p>
+            </div>
+            <div class="info-sec3">
+                <h4>Model</h4>
+                <p class="bike-info">{{currentBike.model}}</p>
+            </div>
+            <div class="info-sec4">   
+                <h4>Engine Size</h4>
+                <p class="bike-info">{{currentBike.engineSize}}</p> 
+            </div> 
+        </div>
+    </div>
+    <div class="buttons">
+        <button class="button btn1" (click)="deleteBike(currentBike.id)">DELETE</button>
+        <button class="button btn2" (click)="navigateTo()">Update</button>
+    </div>
+</div>

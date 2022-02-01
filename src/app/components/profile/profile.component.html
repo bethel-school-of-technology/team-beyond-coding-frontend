@@ -64,11 +64,18 @@
         </div>         
         <!-- --------user garage---------- -->
         <div class="garage-container">
-            <h3 class="garage-title">Garage</h3>
-            
-            <div class="inner-garage-container">
-                <app-garage></app-garage>
-                <button type="button" routerLink="addbike">Add Bike</button>
+            <div>
+                <h3 class="garage-title">Garage</h3>
+            </div>
+            <div class="inner-garage-container" >
+                <div class="bikes-container">
+                    <div class="bike-tab">  
+                        <ul>
+                            <li *ngFor="let bike of bikeList" id="tab{{bike.id}}" routerLink="bike/{{bike.id}}" ><fa-icon [icon]="faMotorcycle" size="1x" class="bike-icon "></fa-icon> {{bike.id}}</li> 
+                        </ul>
+                        <button type="button" routerLink="addbike" class="add-btn">Add Bike</button>
+                    </div>    
+                </div>
                 <router-outlet></router-outlet>
             </div>
         </div>
@@ -95,7 +102,3 @@
         </div>
     </div>    
 </div>
-
-
-
-
