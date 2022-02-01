@@ -1,3 +1,4 @@
+<router-outlet></router-outlet>
 <div class="bike-profile">
     <div class="content" >
         <div class="content-value" id="{{currentBike.id}}">
@@ -20,7 +21,7 @@
         </div>
     </div>
     <div class="buttons">
-        <button type="button" class="button btn1" (click)="deleteBike(currentBike.id)">DELETE</button>
-        <button type="button" class="button btn2" routerLink="">Update</button>
+        <button class="button btn1" (click)="deleteBike(currentBike.id)">DELETE</button>
+        <button class="button btn2" (click)="navigateTo()">Update</button>
     </div>
 </div>

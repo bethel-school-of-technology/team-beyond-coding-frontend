@@ -10,10 +10,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { GarageComponent } from './components/profile/garage/garage.component';
 import { AddbikeComponent } from './components/profile/garage/addbike/addbike.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ViewbikeComponent } from './components/profile/garage/viewbike/viewbike.component';
+import { HomeComponent } from './components/home/home.component';
+import { UpdatebikeComponent } from './components/profile/garage/updatebike/updatebike.component';
 
 
 
@@ -23,9 +24,10 @@ import { ViewbikeComponent } from './components/profile/garage/viewbike/viewbike
   declarations: [
     AppComponent,
     ProfileComponent,
-    GarageComponent,
     AddbikeComponent,
     ViewbikeComponent,
+    HomeComponent,
+    UpdatebikeComponent,
   ],
   imports: [
     BrowserModule,

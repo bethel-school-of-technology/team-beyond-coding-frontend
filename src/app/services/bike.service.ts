@@ -20,4 +20,11 @@ export class BikeService {
   addBike(newBike: Bike): Observable<Bike> {
     return this.http.post<Bike>(this.myBikeURL, newBike);
   }
+  deleteBike(deleteID: number): Observable<any> {
+    return this.http.delete<any>(`${this.myBikeURL}/${deleteID}`)
+  }
+  updateBike(editID: number, edittedInfo: Bike): Observable<Bike> {
+    return this.http.put<Bike>(`${this.myBikeURL}/${editID}`, edittedInfo)
+  }
+  
 }

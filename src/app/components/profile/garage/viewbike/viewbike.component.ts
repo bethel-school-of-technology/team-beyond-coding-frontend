@@ -30,7 +30,10 @@ export class ViewbikeComponent implements OnInit {
   }
   deleteBike(id: number){
     this.myBikeService.deleteBike(id).subscribe(response => {
-      this.router.navigate(["profile"])
+      this.router.navigate(["profile/addbike"])
     })
+  }
+  navigateTo(){
+    this.router.navigate(['profile/update/bike/' + this.bikeID])
   }
 }

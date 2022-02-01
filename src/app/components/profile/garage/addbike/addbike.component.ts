@@ -12,21 +12,26 @@ import { BikeService } from 'src/app/services/bike.service';
 export class AddbikeComponent implements OnInit {
   newBike: Bike = new Bike();
 
-  @Output("pageRefresh") pageRefresh: EventEmitter<any> = new EventEmitter;
+  bikeList: Bike[] = [];
+
+  @Output('pageRefresh') pageRefresh: EventEmitter<any> = new EventEmitter();
 
   constructor(private myBikeService: BikeService, private router: Router) {}
 
-  ngOnInit(): void {}
-
-  addBike() {
-    
-    this.myBikeService.addBike(this.newBike).subscribe((response) => {
-      this.router.navigate(['profile']);
-      
+  ngOnInit(): void {
+    this.myBikeService.getAllBikes().subscribe((response) => {
+      console.log(response);
+      this.bikeList = response;
     });
   }
-  
-  refresh(){
-    this.pageRefresh.emit()
-  } 
+
+  addBike() {
+    this.myBikeService.addBike(this.newBike).subscribe((response) => {
+      this.router.navigate(['profile/bike/' + (this.bikeList.length + 1)])
+    });
+  }
+
+  info() {
+    console.log(this.bikeList.length + 1);
+  }
 }

@@ -1,32 +1,18 @@
 {
   "bikes": [
     {
-      "type": "Sportbike",
-      "make": "china",
-      "model": "cheap",
-      "engineSize": "1",
+      "type": "Scrambler",
+      "make": "Sokia",
+      "model": "S87mx",
+      "engineSize": "800cc",
       "id": 1
     },
     {
-      "type": "Scrambler",
-      "make": "peru",
+      "type": "Minibike",
+      "make": "russia",
       "model": "cheap",
-      "engineSize": "2",
-      "id": 2
-    },
-    {
-      "type": "Dirt Bike",
-      "model": "asdas",
-      "make": "dsadas",
-      "engineSize": "asdas",
-      "id": 3
-    },
-    {
-      "type": "Sport-Tourer",
-      "make": "artica",
-      "model": "ice-blue",
       "engineSize": "medium",
-      "id": 4
+      "id": 2
     }
   ]
 }
