@@ -25,8 +25,7 @@
                 </button>
             </div> 
             <div class="diagonal-div">
-                <div class="left-diag-container"></div>
-    
+                <!-- <div class="diag-container"></div> -->
             </div>
         </div>
     </div>
@@ -34,28 +33,48 @@
         <div class="info-container">
             <img class="img" src="../../../assets/img/bike1.jpg">
             <div class="information">
-                <h5>Group Ride</h5>
+                <h4>Group Ride</h4>
                 <h3>Dont be shy</h3>
-                <h3>Ride with Us!</h3>
+                <h2>Ride with Us!</h2>
                 <div>
                     <p class="info-p">Sed quis sapien eu nisi tincidunt tristique vel in elit. Etiam lobortis malesuada tortor. Phasellus tempor porta sollicitudin. Suspendisse elementum maximus eros nec pretium. Nullam dapibus lobortis eros sit amet ornare. Vestibulum hendrerit molestie molestie. Morbi dui dolor, suscipit quis augue et, tempus dignissim nisl. </p>
                 </div>
                 <div class="four-info-container">
-                    <div>
-                        <h4>Profile</h4>
-                        <p>Share about yourself to others!</p>
-                    </div>
-                    <div>
-                        <h4>Events</h4>
-                        <p>Check for near by events!</p>
-                    </div>
-                    <div>
-                        <h4>Gallery</h4>
-                        <p>Share pics with the comunity!</p>
-                    </div>
-                    <div>
-                        <h4>Connect with Others</h4>
-                        <p>Check out our Community page!</p>
+                    <div class="align-container">
+                        <div class="align-icon">
+                            <fa-icon [icon]="faIdBadge" size="2x" class="info-icon "></fa-icon>
+                        </div>
+                        <div>
+                            <h3>Profile</h3>
+                            <p>Share about yourself to others!</p>
+                        </div>
+                    </div>    
+                    <div class="align-container">  
+                        <div class="align-icon">
+                            <fa-icon [icon]="faCalendarAlt" size="2x" class="info-icon "></fa-icon> 
+                        </div>
+                        <div>
+                            <h3>Events</h3>
+                            <p>Check for near by events!</p>
+                        </div>
+                    </div>     
+                    <div class="align-container"> 
+                        <div class="align-icon">
+                            <fa-icon [icon]="faImages" size="2x" class="info-icon "></fa-icon>  
+                        </div>
+                        <div>
+                            <h3>Gallery</h3>
+                            <p>Share pics with the comunity!</p>
+                        </div>
+                    </div>     
+                    <div class="align-container"> 
+                        <div class="align-icon">
+                            <fa-icon [icon]="faHandshake" size="2x" class="info-icon "></fa-icon>   
+                        </div>
+                        <div>
+                            <h3>Connect</h3>
+                            <p>Check out our Community page!</p>
+                        </div>
                     </div>
                 </div>
             </div>
