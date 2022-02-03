@@ -12,17 +12,15 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  background-color: var(--darkgreen3);
+  background: linear-gradient(to bottom, #2b2d42 0%, #8d99ae 25%, #edf2f4 70%, #2b2d42 100% );
   width: 100%;
 }
 
 .user-pic {
-  background-color: var(--darkgreen1);
   display:flex;
   height: 200px;
   padding: 10px 0;
-  border: 3px solid var(--highlight);
-  border-bottom: none;
+  
 }
 
 .avatar-container {
@@ -58,9 +56,6 @@
   display: flex;
   justify-content: space-between;
   align-items: end;
-  border: 3px solid var(--highlight);
-  border-top: none;
-  background-color: var(--darkgreen1);
   padding:0 5px 0px 10px;
   margin-bottom: 12px
 }
@@ -131,11 +126,12 @@ input:checked + .slider:before {
 }
 /* ----------Account details-------- */
 .user-info {
-  background-color: var(--darkgreen1);
-  border: 3px solid var(--highlight);
+  border-top: 2px solid #edf2f4;
+  border-bottom: 2px solid #edf2f4;
   padding: 20px;
   width: 100%;
   margin-bottom: 12px;
+
 }
 
 .info-sec-title {
@@ -143,7 +139,6 @@ input:checked + .slider:before {
 }
 
 .info-fn {
-  border: 1px solid var(--highlight);
   background-color: white;
   padding: 5px;
 }
@@ -211,12 +206,11 @@ input:checked + .slider:before {
 
 /* ----Garage---- */
 .garage-container {
-  background-color: var(--darkgreen1);
-  border: 3px solid var(--highlight);
   padding:15px;
   width: 100%;
   margin-bottom: 12px;
   height: 300px;
+  border-bottom: 2px solid #edf2f4;
 }
 .garage-title {
   padding-bottom: 10px;
@@ -224,12 +218,12 @@ input:checked + .slider:before {
 .inner-garage-container {
   width: 100%;
   height: 220px;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 
 /* --------About me -------- */
 .about-container {
-  background-color: var(--darkgreen1);
-  border: 3px solid var(--highlight);
   padding:15px;
   width: 100%;
   margin-bottom: 12px
@@ -248,8 +242,6 @@ input:checked + .slider:before {
 /* -----Gallery------ */
 .gallery {
   text-align: start;
-  background-color: var(--darkgreen1);
-  border: 3px solid var(--highlight);
   padding: 10px;
 }
 
@@ -318,7 +310,6 @@ input:checked + .slider:before {
   /* ----Garage---- */
 
   .garage-container {
-    border: 3px solid var(--highlight);
     width: 49%;
     margin-right: 1%;
   }
@@ -328,7 +319,6 @@ input:checked + .slider:before {
   }
   /* --------About me -------- */
   .about-container {
-    border: 3px solid var(--highlight);
     width: 49%;
     margin-left: 1%;
   }
