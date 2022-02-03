@@ -1,0 +1,40 @@
+.content-value {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    padding: 5px 20px 10px;
+}
+
+h4 {
+    padding: 5px 5px 3px;
+}
+
+.bike-info {
+    background-color: white;
+    border: 1px solid black;
+    padding: 3px;
+    width: 80%;
+}
+
+.info-sec1 {
+    width: 50%;
+}
+
+.info-sec2 {
+    width: 50%;
+}
+
+.info-sec3 {
+    width: 50%;
+}
+
+.info-sec4 {
+    width: 50%;
+}
+.save-btn {
+    display: flex;
+    justify-content: end; 
+    padding-top: 15px;
+    width: 100%; 
+}
