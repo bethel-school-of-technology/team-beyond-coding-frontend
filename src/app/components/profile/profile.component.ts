@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import { faUsersCog } from '@fortawesome/free-solid-svg-icons';
-import { Bike } from 'src/app/models/bike/bike';
 import { faMotorcycle } from '@fortawesome/free-solid-svg-icons';
+import { Bike } from 'src/app/models/bike/bike';
 import { BikeService } from 'src/app/services/bike.service';
 
 
@@ -36,10 +36,12 @@ export class ProfileComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.myBikeService.getAllBikes().subscribe((response) => {
-      console.log(response);
-      this.bikeList = response;
-    });
+    this.myBikeService.refreshBikes$.subscribe(() => {
+          this.myBikeService.getAllBikes().subscribe((response) => {
+            console.log(response);
+            this.bikeList = response;
+          });
+    })
   }
   pageRefresh() {
     window.location.reload();

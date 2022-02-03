@@ -8,11 +8,13 @@
       "id": 1
     },
     {
-      "type": "Minibike",
-      "make": "russia",
-      "model": "cheap",
-      "engineSize": "medium",
       "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
     }
   ]
 }
