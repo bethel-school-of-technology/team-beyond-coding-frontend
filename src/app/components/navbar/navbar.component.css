@@ -4,20 +4,15 @@
 box-sizing: border-box;
 }
 
-header{
-  opacity: 0.3;
-}
 
 .pill-nav{
   display: flex;
   justify-content: space-between;
   width: 100%;
-
 }
 
 .headerBox{
   display: flex;
-
 }
 
 .fa-bars{
