@@ -4,32 +4,59 @@
 box-sizing: border-box;
 }
 
-.header-box{
-  float: right;
+header{
+  opacity: 0.3;
+}
+
+.pill-nav{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+}
+
+.headerBox{
+  display: flex;
+
+}
+
+.fa-bars{
+  margin: auto;
+  order: 0;
+  display: flex;
+}
+
+.routes-container{
+  display:flex;
+  justify-content: center;
+  width: 100%;
+  padding-left: 170px;
+}
+
+.search-container{
+  justify-content: end;
+}
+
+.pill-nav a.active {
+  background-color: #EF233C;
+  color: white;
 }
 
 
 .search-bar{
-  float: center;
+  justify-content: flex-end;
   padding: 6px;
-  border: 2px solid blue;
+  border: 2px solid #2B2D42;
   border-radius: 5px;
   margin-top: 8px;
   margin-right: 16px;
   font-size: 17px;
-}
 
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    min-height: 100vh;
 }
 
 .pill-nav a {
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
     color: black;
     text-align: center;
     padding: 14px;
@@ -45,9 +72,4 @@ body{
     color: black;
   }
   
-  /* Add a color to the active/current link */
-  .pill-nav a.active {
-    background-color: red;
-    color: white;
-  }
 

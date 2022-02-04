@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ViewbikeComponent } from './components/profile/garage/viewbike/viewbike.component';
 import { HomeComponent } from './components/home/home.component';
 import { UpdatebikeComponent } from './components/profile/garage/updatebike/updatebike.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 
@@ -28,6 +29,7 @@ import { UpdatebikeComponent } from './components/profile/garage/updatebike/upda
     ViewbikeComponent,
     HomeComponent,
     UpdatebikeComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
