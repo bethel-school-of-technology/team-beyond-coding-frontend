@@ -4,6 +4,9 @@
 box-sizing: border-box;
 }
 
+header{
+  background: transparent;
+}
 
 .pill-nav{
   display: flex;
@@ -16,7 +19,7 @@ box-sizing: border-box;
 }
 
 .fa-bars{
-  margin: auto;
+  margin: 10px;
   order: 0;
   display: flex;
 }
