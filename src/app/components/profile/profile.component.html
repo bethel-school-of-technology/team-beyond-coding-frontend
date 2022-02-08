@@ -1,104 +1,109 @@
 <!-- ---------nav goes here-------- -->
 <div class="mock-nav">nav bar place-holder</div>
-<div class="profile-container">
-    <!-- --------user container---------- -->
-    <div class="user-pic">
-        <!-- --------user Avatar/pic-------- ---->
-        <div class="avatar-container">
-            <fa-icon [icon]="faUserCircle" size="10x" class="avatar-icon "></fa-icon>
-        </div>
-        <div class="user-setting-container">
-            <div class="username-id">
-                <!-- --------user Username---------- -->
-                <h1 class="username">{{UserName}}</h1>
-                <!-- --------user Id--------- --->
-                <h3 class="user-id">User_ID: {{UserId}}</h3>
+<div class="background">
+    <div class="profile-container">
+        <!-- --------user container---------- -->
+        <div class="user-pic">
+            <!-- --------user Avatar/pic-------- ---->
+            <div class="avatar-container">
+                <fa-icon [icon]="faUserCircle" size="10x" class="avatar-icon "></fa-icon>
             </div>
-            
-            <div class="setting">
-                <!-- --------user setting button------- ---->
-                <fa-icon [icon]="faUsersCog" size="2x" class="settings"></fa-icon> 
+            <div class="user-setting-container">
+                <div class="username-id">
+                    <!-- --------user Username---------- -->
+                    <h1 class="username">{{UserName}}</h1>
+                    <!-- --------user Id--------- --->
+                    <h3 class="user-id">User_ID: {{UserId}}</h3>
+                </div>
+                
+                <div class="setting">
+                    <!-- --------user setting button------- ---->
+                    <fa-icon [icon]="faUsersCog" size="2x" class="settings"></fa-icon> 
+                </div>
+            </div>    
+        </div>
+        <div class="txtntoggle">
+            <p class="small-txt">Account details*</p>
+            <div class="toggle-data">
+                <p>{{toggleData}}</p>
+                <div class="toggle">
+                    <!-- --------user toggle button------- ---->
+                    <label class="switch">
+                        <input type="checkbox" class="checkbox" (click)="toggle()">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="wrap-container">
+            <!-- --------user account detailer---------- -->
+            <div class="user-info">
+                <!-- --------user personal info---------- -->
+                <div class="info-sec1">
+                    <h3 class="info-sec-title">Full Name</h3>
+                    <p class="info-fn">{{FullName}}</p>
+                </div>
+                <div class="info-sec2-3">
+                    <div class="info-sec2">
+                        <div class="city-container">
+                            <h3 class="info-sec-title">City</h3>
+                            <p class="info-cty">{{City}}</p>  
+                        </div>
+                        <div class="state-container">
+                            <h3 class="info-sec-title">State</h3>
+                            <p class="info-state">{{State}}</p>
+                        </div>
+                    </div>
+                    <div class="info-sec3">
+                        <div class="birthday-container">
+                            <h3 class="info-sec-title">Birthday</h3>
+                            <p class="info-bir">{{Birthday}}</p>
+                        </div>
+                        <div class="email-container">
+                            <h3 class="info-sec-title">Email</h3>
+                            <p class="info-eml">{{Email}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>         
+            <!-- --------user garage---------- -->
+            <div class="garage-container">
+                <div>
+                    <h2 class="garage-title">Garage</h2>
+                </div>
+                <div class="inner-garage-container" >
+                    <div class="bikes-container">
+                        <div class="bike-tab">  
+                            <ul>
+                                <li *ngFor="let bike of bikeList" id="tab{{bike.id}}" routerLink="bike/{{bike.id}}" ><fa-icon [icon]="faMotorcycle" size="1x" class="bike-icon "></fa-icon></li> 
+                            </ul>
+                            <button type="button" routerLink="addbike" class="add-btn">Add Bike</button>
+                        </div>    
+                    </div>
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+            <!-- --------user about section---------- -->
+            <div class="about-container">
+                <h2 class="about-sec-title">About Me</h2>
+                <textarea class="txt-area">
+                Mauris placerat nulla neque. Proin rutrum tellus lacus, ut fringilla velit luctus in. In nisl justo, viverra at nibh ac, ultricies auctor metus. Maecenas malesuada velit et tortor sagittis, sit amet maximus tellus volutpat. Duis placerat semper aliquam. Donec scelerisque, sem quis viverra dapibus, lorem nunc lacinia nibh, a vehicula nunc magna at turpis. Maecenas fringilla sit amet nunc quis consequat. Integer iaculis dui at enim mollis, nec volutpat ipsum fermentum. Pellentesque at nisl eget est consectetur interdum. Suspendisse nec nibh leo. Donec aliquam nunc vel ultricies pharetra.
+                </textarea>
+            </div>
+            <!-- --------user gallery---------- -->
+            <div class="gallery">
+                <h2 class="a-gallery"><a>Gallery</a></h2>
+                <div class="inner-gal-container">
+                    <!-- <img  class="img-gal" src="../../../assets/img/bike1.jpg" >
+                    <img  class="img-gal" src="../../../assets/img/bike2.jpg" >
+                    <img  class="img-gal" src="../../../assets/img/bike3.jpg" >
+                    <img  class="img-gal" src="../../../assets/img/bike4.jpg" >
+                    <img  class="img-gal" src="../../../assets/img/bike5.jpg" >
+                    <img  class="img-gal" src="../../../assets/img/bike6.jpg" >
+                    <img  class="img-gal" src="../../../assets/img/bike7.jpg" >
+                    <img  class="img-gal" src="../../../assets/img/bike8.jpg" > -->
+                </div>
             </div>
         </div>    
     </div>
-    <div class="txtntoggle">
-        <p class="small-txt">Account details*</p>
-        <div class="toggle">
-            <!-- --------user toggle button------- ---->
-            <label class="switch">
-                <input type="checkbox">
-                <span class="slider round"></span>
-            </label>
-        </div>
-    </div>
-    <div class="wrap-container">
-        <!-- --------user account detailer---------- -->
-        <div class="user-info">
-            <!-- --------user personal info---------- -->
-            <div class="info-sec1">
-                <h3 class="info-sec-title">Full Name</h3>
-                <p class="info-fn">{{FullName}}</p>
-            </div>
-            <div class="info-sec2-3">
-                <div class="info-sec2">
-                    <div class="city-container">
-                        <h3 class="info-sec-title">City</h3>
-                        <p class="info-cty">{{City}}</p>  
-                    </div>
-                    <div class="state-container">
-                        <h3 class="info-sec-title">State</h3>
-                        <p class="info-state">{{State}}</p>
-                    </div>
-                </div>
-                <div class="info-sec3">
-                    <div class="birthday-container">
-                        <h3 class="info-sec-title">Birthday</h3>
-                        <p class="info-bir">{{Birthday}}</p>
-                    </div>
-                    <div class="email-container">
-                        <h3 class="info-sec-title">Email</h3>
-                        <p class="info-eml">{{Email}}</p>
-                    </div>
-                </div>
-            </div>
-        </div>         
-        <!-- --------user garage---------- -->
-        <div class="garage-container">
-            <div>
-                <h3 class="garage-title">Garage</h3>
-            </div>
-            <div class="inner-garage-container" >
-                <div class="bikes-container">
-                    <div class="bike-tab">  
-                        <ul>
-                            <li *ngFor="let bike of bikeList" id="tab{{bike.id}}" routerLink="bike/{{bike.id}}" ><fa-icon [icon]="faMotorcycle" size="1x" class="bike-icon "></fa-icon> {{bike.id}}</li> 
-                        </ul>
-                        <button type="button" routerLink="addbike" class="add-btn">Add Bike</button>
-                    </div>    
-                </div>
-                <router-outlet></router-outlet>
-            </div>
-        </div>
-        <!-- --------user about section---------- -->
-        <div class="about-container">
-            <h3 class="about-sec-title">A little about me</h3>
-            <textarea class="txt-area">
-            Mauris placerat nulla neque. Proin rutrum tellus lacus, ut fringilla velit luctus in. In nisl justo, viverra at nibh ac, ultricies auctor metus. Maecenas malesuada velit et tortor sagittis, sit amet maximus tellus volutpat. Duis placerat semper aliquam. Donec scelerisque, sem quis viverra dapibus, lorem nunc lacinia nibh, a vehicula nunc magna at turpis. Maecenas fringilla sit amet nunc quis consequat. Integer iaculis dui at enim mollis, nec volutpat ipsum fermentum. Pellentesque at nisl eget est consectetur interdum. Suspendisse nec nibh leo. Donec aliquam nunc vel ultricies pharetra.
-            </textarea>
-        </div>
-        <!-- --------user gallery---------- -->
-        <div class="gallery">
-            <h2 class="a-gallery"><a>Gallery</a></h2>
-            <div class="inner-gal-container">
-                <img  class="img-gal" src="../../../assets/img/bike1.jpg" >
-                <img  class="img-gal" src="../../../assets/img/bike2.jpg" >
-                <img  class="img-gal" src="../../../assets/img/bike3.jpg" >
-                <img  class="img-gal" src="../../../assets/img/bike4.jpg" >
-                <img  class="img-gal" src="../../../assets/img/bike5.jpg" >
-                <img  class="img-gal" src="../../../assets/img/bike6.jpg" >
-                <img  class="img-gal" src="../../../assets/img/bike7.jpg" >
-                <img  class="img-gal" src="../../../assets/img/bike8.jpg" >
-            </div>
-        </div>
-    </div>    
 </div>

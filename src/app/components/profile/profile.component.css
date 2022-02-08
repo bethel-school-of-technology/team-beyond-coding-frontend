@@ -7,22 +7,22 @@
 }
 
 /* ----Avatar box---- */
-
+.background {
+  background: linear-gradient(to bottom, #edf2f4 0%, #8d99ae 35%, #2b2d42 100% );
+}
 .profile-container {
+  
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  background-color: var(--darkgreen3);
   width: 100%;
 }
 
 .user-pic {
-  background-color: var(--darkgreen1);
   display:flex;
   height: 200px;
   padding: 10px 0;
-  border: 3px solid var(--highlight);
-  border-bottom: none;
+  
 }
 
 .avatar-container {
@@ -48,6 +48,8 @@
 .username-id {
   padding-top: 3em;
   padding-left: 10px;
+  color: white;
+  text-shadow: black 2px 2px 0;
 }
 
 .setting {
@@ -58,15 +60,22 @@
   display: flex;
   justify-content: space-between;
   align-items: end;
-  border: 3px solid var(--highlight);
-  border-top: none;
-  background-color: var(--darkgreen1);
-  padding:0 5px 0px 10px;
-  margin-bottom: 12px
+  padding:0 5px 5px 10px;
 }
 
-.toggle {
+.toggle-data {
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  
+}
+.toggle-data p {
+  padding-bottom: 5px;
   padding-right: 5px;
+  font-size: 10px;
+}
+.toggle {
+  padding-right: 10px;
   padding-bottom: 5px;
 }
 
@@ -90,8 +99,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--darkgreen2);
-  -webkit-transition: .4s;
+  background-color: #8d99ae;
   transition: .4s;
 }
 
@@ -103,21 +111,14 @@
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
   transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: var(--highlight);
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px var(--darkgreen1);
+  background-color: #2b2d42;
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(16px);
-  -ms-transform: translateX(16px);
   transform: translateX(16px);
 }
 
@@ -131,21 +132,24 @@ input:checked + .slider:before {
 }
 /* ----------Account details-------- */
 .user-info {
-  background-color: var(--darkgreen1);
-  border: 3px solid var(--highlight);
+  border-top: 2px solid #edf2f4;
+  border-bottom: 2px solid #edf2f4;
   padding: 20px;
   width: 100%;
   margin-bottom: 12px;
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0), 5px 5px 15px 5px rgba(0,0,0,0.5);
 }
 
 .info-sec-title {
-  padding-left: 2px;
+  padding:0 0 2px 4px;
+  color: black;
+  text-shadow: white 1px 1px 0;
 }
 
 .info-fn {
-  border: 1px solid var(--highlight);
   background-color: white;
   padding: 5px;
+  border: 1px solid #8d99ae;
 }
 
 .info-sec1 {
@@ -163,10 +167,10 @@ input:checked + .slider:before {
 }
 
 .info-cty {
-  border: 1px solid var(--highlight);
   background-color: white;
   padding: 5px;
   width: 100%;
+  border: 1px solid #8d99ae;
 }
 
 .state-container {
@@ -175,9 +179,9 @@ input:checked + .slider:before {
 }
 
 .info-state {
-  border: 1px solid var(--highlight);
   background-color: white;
   padding: 5px;
+  border: 1px solid #8d99ae;
 }
 
 .info-sec3 {
@@ -191,10 +195,9 @@ input:checked + .slider:before {
 }
 
 .info-bir {
-  border: 1px solid var(--highlight);
   background-color: white;
   padding: 5px;
-  
+  border: 1px solid #8d99ae;
 }
 
 .email-container {
@@ -203,54 +206,130 @@ input:checked + .slider:before {
 }
 
 .info-eml {
-  border: 1px solid var(--highlight);
   background-color: white;
   padding: 5px;
+  border: 1px solid #8d99ae;
 }
 
 
 /* ----Garage---- */
 .garage-container {
-  background-color: var(--darkgreen1);
-  border: 3px solid var(--highlight);
   padding:15px;
   width: 100%;
-  margin-bottom: 12px;
+  margin-bottom: 30px;
   height: 300px;
 }
 .garage-title {
-  padding-bottom: 10px;
+  padding-bottom: 18px;
 }
+
 .inner-garage-container {
+  background-image: linear-gradient( #edf2f4 5%, #8d99ae 90% );
+  border-radius: 12px;
+  
   width: 100%;
-  height: 220px;
+  height: 232px;
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0), 5px 5px 15px 5px rgba(0,0,0,0.5);
 }
+.bikes-container:after {
+  margin-top: -30px;
+  margin-left: 20px;
+  font-weight: 500;
+  content: "Looks empty, add a Bike!";
+  position: absolute;
+  z-index: 0;
+}
+
+.bike-tab {
+  display: flex;
+  width: 100%;
+}
+
+.bike-tab ul {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  z-index: 1;
+}
+.bike-tab li {
+  cursor: pointer;
+  display: inline-block;
+  background-image: linear-gradient( #edf2f4 5%, #8d99ae 90% );
+  color: #2b2d42;
+  text-align: center;
+  width: 100%;
+  border: 3px solid #2b2d42;
+  padding: 16px 20px;
+  border-radius: 12px 12px 0 0;
+  margin-top: -8px;
+}
+.bike-tab li:hover {
+  color: #ffb703;
+}
+
+.bike-tab li:focus {
+  background-image: linear-gradient( #2b2d42 0%,#8d99ae 55%, #edf2f4  100% );
+  border-bottom:none;
+  padding-top: 19px;
+}
+
+.add-btn {
+  font-family: sans-serif;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-block;
+  background-image: linear-gradient( #edf2f4 5%, #8d99ae 90% );
+  color: #2b2d42;
+  text-align: center;
+  width: 50%;
+  border: 3px solid #2b2d42;
+  padding: 16px 10px;
+  border-radius: 12px 12px 0 0;
+  margin-top: -8px;
+  z-index: 1;
+}
+.add-btn:hover {
+  color: #ffb703;
+}
+
+.add-btn:focus {
+  background-image: linear-gradient( #2b2d42 0%,#8d99ae 55%, #edf2f4  100% );
+  border-bottom: none;
+  padding-top: 19px; 
+}
+
 
 /* --------About me -------- */
 .about-container {
-  background-color: var(--darkgreen1);
-  border: 3px solid var(--highlight);
-  padding:15px;
+  padding: 15px;
   width: 100%;
-  margin-bottom: 12px
+  height: 300px;
+  margin-bottom: 12px;
+  border-top: 2px solid #edf2f4;
+  border-bottom: 2px solid #edf2f4;
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0), 5px 5px 15px 5px rgba(0,0,0,0.5);
 }
 
 .about-sec-title {
   padding-bottom: 10px;
+  
 }
 
 .txt-area {
   padding: 5px;
   width: 100%;
-  height: 180px;
+  height: 216px;
+  border: 3px solid black;
+  font-size: 14px;
 }
 
 /* -----Gallery------ */
 .gallery {
   text-align: start;
-  background-color: var(--darkgreen1);
-  border: 3px solid var(--highlight);
   padding: 10px;
+}
+.a-gallery {
+  padding-bottom: 10px;
 }
 
 .inner-gal-container {
@@ -259,15 +338,16 @@ input:checked + .slider:before {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding-top: 15px;
+  -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0), 5px 5px 15px 5px rgba(0,0,0,0.5); 
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0), 5px 5px 15px 5px rgba(0,0,0,0.5);
 }
 
 .img-gal  {
+  object-fit: cover;
   width: 180px;
   height: 180px;
-  margin: 1px;
-  border: 2px solid black;
 }
+
 
 @media screen and (min-width: 768px){
   * {
@@ -318,35 +398,50 @@ input:checked + .slider:before {
   /* ----Garage---- */
 
   .garage-container {
-    border: 3px solid var(--highlight);
     width: 49%;
     margin-right: 1%;
+    padding: 15px;
+    height: 320px;
+    margin-bottom: 12px;
+    border-top: 2px solid #edf2f4;
+    border-bottom: 2px solid #edf2f4;
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0), 5px 5px 15px 5px rgba(0,0,0,0.5);
   }
   .inner-garage-container {
     width: 100%;
-    height: 220px;
+    height: 236px;
+    box-shadow:none;
+  }
+  .bike-tab li {
+    padding: 16px 12px;
   }
   /* --------About me -------- */
   .about-container {
-    border: 3px solid var(--highlight);
     width: 49%;
     margin-left: 1%;
+    height: 320px;
   }
   .txt-area {
     width: 100%;
-    height: 220px;
+    height: 245px;
+    border-radius: 12px;
   }
   /* -----Gallery------ */
   .gallery {
     width: 100%;
+    border-top: 2px solid #edf2f4;
+    border-bottom: 2px solid #edf2f4;
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0), 5px 5px 15px 5px rgba(0,0,0,0.5);
+  
   }
   .img-gal {
     width: 350px;
     height: 350px;
   }
 }
-
-
+  
+  
+  
 @media screen and (min-width: 1020px){
   *{
     font-size: 18px;
@@ -370,6 +465,9 @@ input:checked + .slider:before {
     height: 280px;
     margin-right: .5%;
   }
+  .info-sec-title {
+    text-shadow: none;
+  }
   .info-sec2-3 {
     display: block;
     padding-top:0;
@@ -386,10 +484,15 @@ input:checked + .slider:before {
   
   /*----garage container------*/
   .garage-container {
+    display: flex;
+    justify-content: center;
     width: 59.5%;
     margin-left: .5%;
     margin-right: 0;
     height: 280px;
+  }
+  .garage-title {
+    padding-right: 20px;
   }
   .inner-garage-container{
     height: 83%;
@@ -424,226 +527,10 @@ input:checked + .slider:before {
     display: flex;
     justify-content: center;
     width: 600px;
-    padding-left: 5%;
+    padding-left: 8%;
   }
   .img-gal {
     height: 120px;
     width: 120px;
-  }
-  
-}
-@media screen and (min-width: 1020px){
-  .garage-container {
-    display: flex;
-    justify-content: center;
-  }
-  .inner-garage-container {
-    padding-left: 20px;
-  }
-  .inner-gal-container{
-    padding-left: 8%;
-  }
-}
-
-.bike-tab {
-  display: flex;
-  width: 100%;
-}
-
-.bike-tab ul {
-  padding: 0;
-  width: 100%;
-  display: flex;
-  
-}
-
-.bike-tab li {
-  color: #fff;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 16px 20px;
-  position: relative;
-  z-index: 0;
-  width: 100%;
-}
-
-.bike-tab li:before,
-.bike-tab li:after {
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-}
-
-.bike-tab li:before {
-  background-color: rgb(255, 116, 38);
-  content: "";
-  display: block;
-  height: 100%;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: -2;
-}
-
-.bike-tab li:after {
-  background-color: initial;
-  background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
-  bottom: 4px;
-  content: "";
-  display: block;
-  left: 4px;
-  overflow: hidden;
-  position: absolute;
-  right: 4px;
-  top: 4px;
-  transition: all 100ms ease-out;
-  z-index: -1;
-}
-
-.bike-tab li:active {
-  background-image: linear-gradient( #f93a13,#ff7426 );
-}
-
-.bike-tab li:hover:not(:disabled):before {
-  background-image: linear-gradient( #f93a13,#ff7426 );
-}
-
-
-.bike-tab li:hover:not(:disabled):after {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  transition-timing-function: ease-in;
-  opacity: 0;
-}
-
-
-
-
-
-.bike-tab li:active:not(:disabled):after {
-  background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
-  bottom: 4px;
-  left: 4px;
-  right: 4px;
-  top: 4px;
-}
-
-.bike-tab li:disabled {
-  cursor: default;
-  opacity: .24;
-}
-
-.add-btn {
-  align-items: center;
-  appearance: none;
-  background-clip: padding-box;
-  background-color: initial;
-  background-image: none;
-  border-style: none;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  flex-direction: row;
-  flex-shrink: 0;
-  font-family: Eina01,sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  justify-content: center;
-  margin: 0;
-  outline: none;
-  overflow: visible;
-  padding: 16px 16px 12px 10px;
-  pointer-events: auto;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  text-transform: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-  width: auto;
-  word-break: keep-all;
-  z-index: 0;
-}
-
-.add-btn:before,
-.add-btn:after {
-  border-top-left-radius: 8px;
-  border-top-right-radius: 22px;
-}
-
-.add-btn:before {
-  background-color:#ff7426;
-  content: "";
-  display: block;
-  height: 100%;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: -2;
-}
-
-.add-btn:after {
-  background-color: initial;
-  background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
-  bottom: 4px;
-  content: "";
-  display: block;
-  left: 4px;
-  overflow: hidden;
-  position: absolute;
-  right: 4px;
-  top: 4px;
-  transition: all 100ms ease-out;
-  z-index: -1;
-}
-
-.add-btn:hover:not(:disabled):before {
-  background-image: linear-gradient( #f93a13,#ff7426) ;
-}
-
-
-.add-btn:hover:not(:disabled):after {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  transition-timing-function: ease-in;
-  opacity: 0;
-}
-
-.add-btn:active:not(:disabled) {
-  color: #ccc;
-}
-
-.add-btn:active:not(:disabled):before {
-  background-image: linear-gradient( #ff7426, #f93a13);
-}
-
-.add-btn:active:not(:disabled):after {
-  background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
-  bottom: 4px;
-  left: 4px;
-  right: 4px;
-  top: 4px;
-}
-
-.add-btn:disabled {
-  cursor: default;
-  opacity: .24;
-}
-
-@media screen and (min-width: 768px){
-  .bike-tab li {
-    padding: 16px 12px;
   }
 }
