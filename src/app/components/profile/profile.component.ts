@@ -27,6 +27,8 @@ export class ProfileComponent implements OnInit {
   State = 'Placeholder';
   Birthday = '12/3456';
   Email = 'Placeholder';
+  toggleData:string = 'Private';
+  
 
   
   constructor(
@@ -43,7 +45,14 @@ export class ProfileComponent implements OnInit {
           });
     })
   }
-  pageRefresh() {
-    window.location.reload();
-  }
+  toggle() {
+    if (this.toggleData === "Private") {
+        this.toggleData = "Public";
+    } else {
+      this.toggleData = "Private"
+    }
+  };
+    
+  
+  
 }

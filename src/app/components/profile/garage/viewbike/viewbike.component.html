@@ -21,7 +21,7 @@
         </div>
     </div>
     <div class="buttons">
-        <button class="button btn1" (click)="deleteBike(currentBike.id)">DELETE</button>
-        <button class="button btn2" (click)="navigateTo()">Update</button>
+        <a class="btn" (click)="deleteBike(currentBike.id)" data-back="Sure?" data-front="Remove">Delete Bike</a>
+        <button class="btn" (click)="navigateTo()">Update Bike</button>
     </div>
 </div>

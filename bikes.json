@@ -1,20 +1,18 @@
 {
   "bikes": [
     {
-      "type": "Scrambler",
-      "make": "Sokia",
-      "model": "S87mx",
-      "engineSize": "800cc",
+      "type": "Dresser",
+      "model": "asdas",
+      "make": "china",
+      "engineSize": "small",
       "id": 1
     },
     {
-      "id": 2
-    },
-    {
+      "make": "dsadas",
+      "type": "Scooter",
+      "model": "ice-blue",
+      "engineSize": "900cc",
       "id": 3
-    },
-    {
-      "id": 4
     }
   ]
 }

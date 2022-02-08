@@ -15,5 +15,53 @@ html, body {
   height: 100%; 
 }
 body { 
-  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+.btn {
+  color: #2b2d42;
+  padding: 5px 10px;
+  background-image: linear-gradient( #edf2f4 5%, #8d99ae 90% );
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: bold;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  z-index: 1;
+  border: 2px solid #2b2d42;
+  border-radius: 3px;
+}
+
+.btn::before {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: #ffb703;
+  transition: 1s ease;
+}
+
+.btn::before {
+  top: -20px;
+  left: -20px;
+}
+
+.btn:hover::before {
+  height: 280px;
+  width: 280px;
+}
+
+.btn:hover {
+  color: #2b2d42;
+}
+
+.btn:active {
+  filter: brightness(1.3);
 }
