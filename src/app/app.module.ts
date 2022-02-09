@@ -15,6 +15,7 @@ import { AddbikeComponent } from './components/profile/garage/addbike/addbike.co
 import { ViewbikeComponent } from './components/profile/garage/viewbike/viewbike.component';
 import { HomeComponent } from './components/home/home.component';
 import { UpdatebikeComponent } from './components/profile/garage/updatebike/updatebike.component';
+import { CaruselComponent } from './components/profile/carusel/carusel.component';
 
 
 
@@ -28,6 +29,7 @@ import { UpdatebikeComponent } from './components/profile/garage/updatebike/upda
     ViewbikeComponent,
     HomeComponent,
     UpdatebikeComponent,
+    CaruselComponent,
   ],
   imports: [
     BrowserModule,
