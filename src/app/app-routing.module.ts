@@ -6,6 +6,7 @@ import { AddbikeComponent } from './components/profile/garage/addbike/addbike.co
 import { ViewbikeComponent } from './components/profile/garage/viewbike/viewbike.component';
 import { HomeComponent } from './components/home/home.component';
 import { UpdatebikeComponent } from './components/profile/garage/updatebike/updatebike.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 
 
@@ -32,6 +33,10 @@ const routes: Routes = [
       }
     
     ],
+  },
+  {
+    path: 'signup',
+    component: SignupComponent,
   },
 ];
 

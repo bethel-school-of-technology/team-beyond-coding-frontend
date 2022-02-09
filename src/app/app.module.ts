@@ -21,6 +21,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
+import { SignupComponent } from './components/signup/signup.component';
 
 
 
@@ -33,6 +34,7 @@ import {MatDividerModule} from '@angular/material/divider';
     HomeComponent,
     UpdatebikeComponent,
     NavbarComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
