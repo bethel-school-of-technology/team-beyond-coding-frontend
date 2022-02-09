@@ -1,10 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-:root {
-  --darkgreen1: #e85d04;
-  --darkgreen2: #9d0208;
-  --darkgreen3: #370617;
-  --highlight: #ffba08;
-}
 
 * {
   margin: 0;

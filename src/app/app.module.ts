@@ -16,8 +16,11 @@ import { ViewbikeComponent } from './components/profile/garage/viewbike/viewbike
 import { HomeComponent } from './components/home/home.component';
 import { UpdatebikeComponent } from './components/profile/garage/updatebike/updatebike.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-
-
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
+import {MatDividerModule} from '@angular/material/divider';
 
 
 
@@ -40,6 +43,12 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     BrowserAnimationsModule,
     MatTabsModule,
     MatIconModule,
+    MatToolbarModule,
+    FlexLayoutModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatDividerModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent],
