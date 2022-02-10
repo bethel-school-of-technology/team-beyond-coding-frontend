@@ -1,4 +1,26 @@
 <!-- ---------nav goes here-------- -->
+
+<app-navbar></app-navbar>
+
+<div class="profile-container">
+    <!-- --------user container---------- -->
+    <div class="user-pic">
+        <!-- --------user Avatar/pic-------- ---->
+        <div class="avatar-container">
+            <fa-icon [icon]="faUserCircle" size="10x" class="avatar-icon "></fa-icon>
+        </div>
+        <div class="user-setting-container">
+            <div class="username-id">
+                <!-- --------user Username---------- -->
+                <h1 class="username">{{UserName}}</h1>
+                <!-- --------user Id--------- --->
+                <h3 class="user-id">User_ID: {{UserId}}</h3>
+            </div>
+            
+            <div class="setting">
+                <!-- --------user setting button------- ---->
+                <fa-icon [icon]="faUsersCog" size="2x" class="settings"></fa-icon> 
+
 <div class="mock-nav">nav bar place-holder</div>
 <div class="background">
     <div class="profile-container">
@@ -7,6 +29,7 @@
             <!-- --------user Avatar/pic-------- ---->
             <div class="avatar-container">
                 <fa-icon [icon]="faUserCircle" size="10x" class="avatar-icon "></fa-icon>
+
             </div>
             <div class="user-setting-container">
                 <div class="username-id">
