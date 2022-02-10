@@ -14,7 +14,6 @@ export class AddbikeComponent implements OnInit {
 
   bikeList: Bike[] = [];
 
-  @Output('pageRefresh') pageRefresh: EventEmitter<any> = new EventEmitter();
 
   constructor(private myBikeService: BikeService, private router: Router) {}
 
@@ -27,11 +26,8 @@ export class AddbikeComponent implements OnInit {
 
   addBike() {
     this.myBikeService.addBike(this.newBike).subscribe((response) => {
+      this.myBikeService.refreshBikes$.next(true);
       this.router.navigate(['profile/bike/' + (this.bikeList.length + 1)])
     });
-  }
-
-  info() {
-    console.log(this.bikeList.length + 1);
   }
 }
