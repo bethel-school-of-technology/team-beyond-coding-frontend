@@ -1,0 +1,20 @@
+
+<mat-toolbar class="toolbar" fxLayout="row"> 
+  <span class="group-ride-text"fxFlex>Group Ride</span>
+  <button mat-button *ngFor="let item of menuItems" [fxShow]="item.showOnDesktop" [fxShow.xs]="item.showOnMobile"
+    [fxShow.sm]="item.showOnTablet" class="btn">
+    {{item.label}}
+  </button>
+<ng-container>
+  <button mat-icon-button [matMenuTriggerFor]="dropMenu" class="btn"><fa-icon [icon]="faBars" size="2x" class="fa-bars"></fa-icon></button>
+
+  <mat-menu #dropMenu="matMenu">
+    <ng-container *ngFor="let item of menuItems">
+      <div [fxShow]="!item.showOnDesktop" [fxShow.sm]="!item.showOnTablet" [fxShow.xs]="!item.showOnMobile">
+        <button class="btn" mat-menu-item>{{item.label}}</button>
+        <mat-divider></mat-divider>
+      </div>
+    </ng-container>
+  </mat-menu>
+</ng-container>
+</mat-toolbar> 

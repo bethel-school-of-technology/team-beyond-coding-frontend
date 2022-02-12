@@ -15,8 +15,13 @@ import { AddbikeComponent } from './components/profile/garage/addbike/addbike.co
 import { ViewbikeComponent } from './components/profile/garage/viewbike/viewbike.component';
 import { HomeComponent } from './components/home/home.component';
 import { UpdatebikeComponent } from './components/profile/garage/updatebike/updatebike.component';
-
-
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
+import {MatDividerModule} from '@angular/material/divider';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -28,13 +33,21 @@ import { UpdatebikeComponent } from './components/profile/garage/updatebike/upda
     ViewbikeComponent,
     HomeComponent,
     UpdatebikeComponent,
+    NavbarComponent
   ],
   imports: [
+    
     BrowserModule,
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
     FontAwesomeModule,
+    FlexLayoutModule,
+    MatDividerModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
