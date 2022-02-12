@@ -1,0 +1,39 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "firstName": "Michelle",
+      "lastName": "Dooley",
+      "email": "michelledooley@gmail.com",
+      "age": "36",
+      "location": "Las Vegas, NV",
+      "password": "12345",
+      "id": 0
+    },
+    {
+      "firstName": "Amy",
+      "lastName": "Zunino",
+      "email": "amy.zunino@gmail.com",
+      "age": 222,
+      "location": "Boston",
+      "password": "lavidaloca",
+      "id": 1
+    }
+  ]
+}

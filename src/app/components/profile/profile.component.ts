@@ -5,7 +5,7 @@ import { faUsersCog } from '@fortawesome/free-solid-svg-icons';
 import { Bike } from 'src/app/models/bike/bike';
 import { faMotorcycle } from '@fortawesome/free-solid-svg-icons';
 import { BikeService } from 'src/app/services/bike.service';
-
+// import { User } from 'src/app/models/user/user';
 
 
 @Component({
@@ -19,6 +19,7 @@ export class ProfileComponent implements OnInit {
   faMotorcycle = faMotorcycle;
   bikeList: Bike[] = [];
   bikeID: number;
+
 
   UserName = 'Username';
   UserId = '00';

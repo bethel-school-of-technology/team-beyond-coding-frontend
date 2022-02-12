@@ -22,7 +22,7 @@ export class NavbarComponent implements OnInit {
 menuItems : MenuItem[]= [
    {
     label: 'Main Page',
-     route: '',
+     route: 'home',
      showOnMobile: false,
      showOnTablet: true,
      showOnDesktop: true
