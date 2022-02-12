@@ -6,7 +6,6 @@ import { MatTabsModule } from '@angular/material/tabs'
 import { MatIconModule } from '@angular/material/icon'
 
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './components/profile/profile.component';
@@ -24,6 +23,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { SignupComponent } from './components/signup/signup.component';
 import { ReactiveFormsModule }  from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -36,6 +36,7 @@ import { ReactiveFormsModule }  from '@angular/forms';
     UpdatebikeComponent,
     NavbarComponent,
     SignupComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
