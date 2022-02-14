@@ -41,7 +41,6 @@
 .buttons {
     display: flex;
     justify-content: space-between;
-    /* padding-bottom: 464px; */
 }
 
 button {
@@ -139,8 +138,8 @@ button:hover .button-text {
 /*---- section 2----*/
 .sec2-container {
     margin-top: -50px;
-    background: linear-gradient(to bottom, #2b2d42 0%, #8d99ae 25%, #edf2f4 70%, #2b2d42 100% );
-   
+    /* background: linear-gradient(to bottom, #2b2d42 0%, #8d99ae 25%, #edf2f4 70%, #2b2d42 100% ); */
+    background: linear-gradient(to bottom, #8d99ae 0%, #2b2d42 100% );
 }
 
 .info-container {
@@ -151,13 +150,19 @@ button:hover .button-text {
     padding-top: 130px;
     padding-left: 15px;
     padding-right: 15px;
+    padding-bottom: 20px;
 }
 
-.img {
-    width: 354px;
+.bike1 {
+    width: 187px;
     height: 300px;
     object-fit: contain;
-    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 12px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 12px 5px 15px 5px rgba(0,0,0,0);
+}
+.bike2 {
+    width: 354px;
+    height: 238px;
+    object-fit: contain;
     box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 12px 5px 15px 5px rgba(0,0,0,0);
 }
 .information h4 {
@@ -220,12 +225,12 @@ button:hover .button-text {
         padding-right: 40px;
     }
     .bike1 {
-        height: 600px;
+        height: 433px;
         width: 270px;
     }
     .bike2 {
         height: 270px;
-        width: 600px;
+        width: 405px;
     }
 }
 
@@ -244,10 +249,10 @@ button:hover .button-text {
     }
     .bike1 {
         width: 380px;
-        height: 710px;
+        height: 608.3px;
     }
     .bike2 {
-        margin-top: -100px;
+        margin-top: -60px;
         margin-left: 250px;
         width: 570px;
         height: 380px;
