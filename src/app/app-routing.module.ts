@@ -30,6 +30,7 @@ const routes: Routes = [
         path: 'update/bike/:bikeID',
         component: UpdatebikeComponent,
       }
+    
     ],
   },
 ];
@@ -39,5 +40,6 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }
 

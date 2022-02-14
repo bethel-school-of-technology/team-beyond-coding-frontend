@@ -34,7 +34,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ViewbikeComponent,
     HomeComponent,
     UpdatebikeComponent,
-    NavbarComponent
+    NavbarComponent,
   ],
   imports: [
     RouterModule,
