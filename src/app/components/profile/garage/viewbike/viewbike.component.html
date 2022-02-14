@@ -2,26 +2,26 @@
 <div class="bike-profile">
     <div class="content" >
         <div class="content-value" id="{{currentBike.id}}">
-            <div class="info-sec1">
-                <h4>Type</h4>
-                <p class="bike-info">{{currentBike.type}}</p>
+            <div class="info-sec">
+                <label for="Type" class="h4">Type</label>
+                <div name="Type" class="bike-info">{{currentBike.type}}</div>
             </div>
-            <div class="info-sec2">
-                <h4>Make</h4>
-                <p class="bike-info">{{currentBike.make}}</p>
+            <div class="info-sec">
+                <label for="Make" class="h4">Make</label>
+                <div name="Make" class="bike-info">{{currentBike.make}}</div>
             </div>
-            <div class="info-sec3">
-                <h4>Model</h4>
-                <p class="bike-info">{{currentBike.model}}</p>
+            <div class="info-sec" >
+                <label for="Model" class="h4">Model</label>
+                <div name="Model" class="bike-info">{{currentBike.model}}</div>
             </div>
-            <div class="info-sec4">   
-                <h4>Engine Size</h4>
-                <p class="bike-info">{{currentBike.engineSize}}</p> 
+            <div class="info-sec" >   
+                <label for="Engine" class="h4">Engine Size</label>
+                <div name="Engine" class="bike-info">{{currentBike.engineSize}}</div> 
             </div> 
         </div>
     </div>
     <div class="buttons">
         <a class="btn" (click)="deleteBike(currentBike.id)" data-back="Sure?" data-front="Remove">Delete Bike</a>
-        <button class="btn" (click)="navigateTo()">Update Bike</button>
+        <button class="btn" (click)="navigateTo()">Edit Bike</button>
     </div>
 </div>

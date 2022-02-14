@@ -1,11 +1,10 @@
 
 
-/* ----replace with actual nav bar---- */
-
-
 /* ----Avatar box---- */
 .background {
-  background: linear-gradient(to bottom, #edf2f4 0%, #8d99ae 35%, #2b2d42 100% );
+  /* background: linear-gradient(to bottom, #edf2f4 0%, #8d99ae 35%, #2b2d42 100% ); */
+  /* background: linear-gradient(to bottom, #8d99ae 0%, #2b2d42 100% ); */
+  background-color: #8d99ae;
 }
 .profile-container {
   
@@ -96,7 +95,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #8d99ae;
+  background-color: #2b2d42;
   transition: .4s;
 }
 
@@ -112,7 +111,7 @@
 }
 
 input:checked + .slider {
-  background-color: #2b2d42;
+  background-color: #ffb300;
 }
 
 input:checked + .slider:before {
@@ -140,13 +139,14 @@ input:checked + .slider:before {
 .info-sec-title {
   padding:0 0 2px 4px;
   color: black;
-  
+  font-family: 'Prompt', sans-serif;
+  font-weight: bold;
 }
 
-.info-fn {
-  background-color: white;
+.info {
   padding: 5px;
-  border: 1px solid #8d99ae;
+  padding-bottom: 0px;
+  border-bottom: 1px solid black;
 }
 
 .info-sec1 {
@@ -163,22 +163,9 @@ input:checked + .slider:before {
   width: 100%;
 }
 
-.info-cty {
-  background-color: white;
-  padding: 5px;
-  width: 100%;
-  border: 1px solid #8d99ae;
-}
-
 .state-container {
   padding-left: 26px;
   width: 100%;
-}
-
-.info-state {
-  background-color: white;
-  padding: 5px;
-  border: 1px solid #8d99ae;
 }
 
 .info-sec3 {
@@ -191,21 +178,9 @@ input:checked + .slider:before {
   width: 25%;
 }
 
-.info-bir {
-  background-color: white;
-  padding: 5px;
-  border: 1px solid #8d99ae;
-}
-
 .email-container {
   padding-left: 26px;
   width: 80%;
-}
-
-.info-eml {
-  background-color: white;
-  padding: 5px;
-  border: 1px solid #8d99ae;
 }
 
 
@@ -479,7 +454,7 @@ input:checked + .slider:before {
     padding-right: 20px;
   }
   .inner-garage-container{
-    height: 83%;
+    height: 100%;
     width: 100%;
   }
   

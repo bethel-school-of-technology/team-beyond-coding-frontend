@@ -69,7 +69,7 @@ export class ProfileComponent implements OnInit {
   FullName = 'Placeholder';
   City = 'Placeholder';
   State = 'Placeholder';
-  Birthday = '12/3456';
+  Age = 30;
   Email = 'Placeholder';
 
   constructor(

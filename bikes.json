@@ -1,10 +1,10 @@
 {
   "bikes": [
     {
-      "type": "Dual-sport",
-      "model": "cheapa",
+      "type": "Cruiser",
       "make": "russia",
-      "engineSize": "bjjhb",
+      "model": "ice-blue",
+      "engineSize": "medium",
       "id": 1
     }
   ]

@@ -2,7 +2,7 @@
 <div class="bikes">
     <form (ngSubmit)="updateBike()" class="content-value">
         <div class="info-sec1">
-            <h4 for="Type">Type: </h4>
+            <label for="Type" class="h4">Type: </label>
             <select id="Type" name="Type" class="bike-info" [(ngModel)]="editBike.type" required>
                 <option value="Sportbike" selected>Sportbike</option>
                 <option value="Cruiser" >Cruiser</option>
@@ -26,16 +26,16 @@
             </select>    
         </div>  
         <div class="info-sec2"> 
-            <h4>Make: </h4>
+            <label for="Make" class="h4">Make: </label>
             <input type="text" name="Make" class="bike-info" [(ngModel)]="editBike.make" required>
         </div>    
         <div class="info-sec3">
-            <h4>Model: </h4>
+            <label for="Model" class="h4">Model: </label>
             <input type="text" name="Model" class="bike-info" [(ngModel)]="editBike.model" required>
         </div>    
         <div class="info-sec4">
-            <h4>Engine Size: </h4>
-            <input type="text" name="EngineSize" class="bike-info" [(ngModel)]="editBike.engineSize" required>
+            <label for="Engine" class="h4">Engine Size: </label>
+            <input type="text" name="Engine" class="bike-info" [(ngModel)]="editBike.engineSize" required>
         </div>
         <div class="save-btn">     
             <button class="btn" type="submit">Update</button>
