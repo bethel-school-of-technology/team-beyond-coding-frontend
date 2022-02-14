@@ -16,6 +16,8 @@ import { AddbikeComponent } from './components/profile/garage/addbike/addbike.co
 import { ViewbikeComponent } from './components/profile/garage/viewbike/viewbike.component';
 import { HomeComponent } from './components/home/home.component';
 import { UpdatebikeComponent } from './components/profile/garage/updatebike/updatebike.component';
+import { CaruselComponent } from './components/profile/carusel/carusel.component';
+
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatMenuModule} from '@angular/material/menu';
@@ -34,6 +36,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ViewbikeComponent,
     HomeComponent,
     UpdatebikeComponent,
+    CaruselComponent,
     NavbarComponent,
   ],
   imports: [
