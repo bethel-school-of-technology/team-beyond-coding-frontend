@@ -1,18 +1,11 @@
 {
   "bikes": [
     {
-      "type": "Dresser",
-      "model": "asdas",
-      "make": "china",
-      "engineSize": "small",
+      "type": "Dual-sport",
+      "model": "cheapa",
+      "make": "russia",
+      "engineSize": "bjjhb",
       "id": 1
-    },
-    {
-      "make": "dsadas",
-      "type": "Scooter",
-      "model": "ice-blue",
-      "engineSize": "900cc",
-      "id": 3
     }
   ]
 }

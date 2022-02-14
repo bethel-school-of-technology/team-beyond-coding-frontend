@@ -1,0 +1,81 @@
+.carusel-container {
+    position: relative;
+    margin: auto;
+    text-align: center;
+    width: 92%;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #dce1e1;
+    
+}
+
+.carusel-container img {
+    display: none;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.carusel-container img.image-active {
+    display: block;
+    width: 100%;
+    height: 300px;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.btn-carusel {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    padding: 0;
+    text-align: center;
+    background: 0 0;
+    border: 0;
+    cursor: pointer;
+}
+.btn-prev {
+    left: 0;
+}
+.btn-next {
+    right: 0;
+}
+
+.icon-carusel {
+    color: #ffb703;
+    opacity: .5;
+    transition: all 0.15s ease;
+}
+.icon-carusel:hover {
+    opacity: .9;
+}
+.icon-carusel:active {
+    opacity: .5;
+}
+
+.icon-next,
+.icon-prev {
+    font-size: 25px;
+}
+
+@media screen and (min-width: 768px){
+    .carusel-container {
+        
+        width: 100%;
+    }
+}
+
