@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Rock+Salt&display=swap');
+ body {
+    font-size: 12px;
+}
+
+.background {
+    display:flex;
+    flex-wrap:wrap;
+    background: url(https://images.unsplash.com/photo-1558980664-3a031cf67ea8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80) no-repeat ;
+    object-fit:cover;
+    height: 100vh;
+    z-index: -1;
+    clip-path: polygon(100% 0, 100% 96%, 50% 100%, 0 96%, 0 0);
+}
+.homepage-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 200px;
+}
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--text);
+}
+.title h1 {
+    color: #EAEFF2;
+}
+.title p {
+    font-weight:bold;
+    color: #e63946;
+}
+.group-ride-text {
+    transform: rotate(356deg);
+    font-size: 48px;
+    font-family: 'Rock Salt', cursive;
+    padding-bottom: 230px;
+    color: #ffb703;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+button.mainpage-btn {
+    width: 170px;
+    height: auto;
+}
+button.ev {
+    width: 140px;
+    height: auto;
+}
+
+button.mainpage-btn .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #2b2d42;
+    border-radius: 1.625rem;
+}
+
+button.mainpage-btn .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    color: var(--text);
+}
+
+button.mainpage-btn .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+
+button.mainpage-btn .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid white;
+    border-right: 0.125rem solid white;
+    transform: rotate(45deg);
+}
+
+button.mainpage-btn .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin-left: 1.85rem;
+    color: white;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: start;
+    padding-left: 25px;
+    text-transform: uppercase;
+}
+
+button:hover .circle {
+    width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+    background: white;
+    transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+    color: #fff;
+} 
+
+/*---- section 2----*/
+.sec2-container {
+    margin-top: -50px;
+    /* background: linear-gradient(to bottom, #2b2d42 0%, #8d99ae 25%, #edf2f4 70%, #2b2d42 100% ); */
+    background: linear-gradient(to bottom, #8d99ae 0%, #2b2d42 100% );
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 130px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+}
+
+.bike1 {
+    width: 187px;
+    height: 300px;
+    object-fit: contain;
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 12px 5px 15px 5px rgba(0,0,0,0);
+}
+.bike2 {
+    width: 354px;
+    height: 238px;
+    object-fit: contain;
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 12px 5px 15px 5px rgba(0,0,0,0);
+}
+.information h4 {
+    color: #ffb703;
+    padding: 40px 20px 15px;
+}
+.information h3 {
+    padding-left: 20px;
+}
+.information h2 {
+    padding-left: 20px;
+    padding-bottom: 15px;
+}
+.info-p {
+    display: flex;
+    flex-wrap: wrap;
+}
+.four-info-container {
+    padding: 20px 20px 40px 20px;
+    
+}
+.four-info-container h3 {
+    padding-left: 0;
+}
+.align-container {
+    display: flex;
+}
+
+.align-icon {
+    display: flex;
+}    
+
+.info-icon {
+    width: 70px;
+    height: 60px;
+}
+
+
+
+@media screen and (min-width: 760px){
+    body {
+        font-size: 16px;
+    }
+    .homepage-info {
+        margin-left: 60px;
+    }
+    .sec2-container {
+        margin-top: -40px;
+    }
+    .info-container {
+        padding: 130px 35px;
+    }
+    .four-info-container {
+        display: flex;
+        flex-wrap: wrap;  
+        justify-content: start;
+        width: 100%;
+    }
+    .align-container{
+        padding-right: 40px;
+    }
+    .bike1 {
+        height: 433px;
+        width: 270px;
+    }
+    .bike2 {
+        height: 270px;
+        width: 405px;
+    }
+}
+
+@media screen and (min-width: 1020px){
+    .info-container {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .information {
+        padding-left: 20px;
+        width:40%
+    }
+    .information h4 {
+        padding-top: 0;
+    }
+    .bike1 {
+        width: 380px;
+        height: 608.3px;
+    }
+    .bike2 {
+        margin-top: -60px;
+        margin-left: 250px;
+        width: 570px;
+        height: 380px;
+    }
+}

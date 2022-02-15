@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    margin-top: 20px;
+    border: 5px #2B2D42;
+    width: 700px;
+    height: 600px;
+    padding: 40px;
+    top: 50%;
+    Left: 50%;
+    background: #8D99AE;
+    color: white;
+    font-family: inherit;
+    text-align: center;
+    justify-content: center;
+    border-radius: 40px;
+    align-items: stretch;
+
+}
+
+.form-container{
+    color: white;
+    text-align: center;
+    
+}
