@@ -26,34 +26,26 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
     this.signupForm = this.formBuilder.group({
-      firstName:[''],
-      lastName:[''],
-      email:[''],
-      age:[''],
-      location:[''],
-      password:['']
+      firstName: '',
+      lastName:'',
+      email:'',
+      age:'',
+      city:'',
+      state: '',
+      password: ''
 
     })
   }
 
-// signup(){
-//     this.http.post<any>('http://localhost:3000/users', this.signupForm.value) 
-//     .subscribe(res=>{
-//       alert("Registration Successful");
-//       this.signupForm.reset();
-//       this.router.navigate(['login']);
-//     }, err=>{
-//       alert("Something went wrong, please try again.")
-    
-//     })
-//   }
+
 
 postUserDetails(){
   this.userModelObject.firstName = this.signupForm.value.firstName;
   this.userModelObject.lastName = this.signupForm.value.lastName;
   this.userModelObject.email = this.signupForm.value.email;
   this.userModelObject.age = this.signupForm.value.age;
-  this.userModelObject.location = this.signupForm.value.location;
+  this.userModelObject.city = this.signupForm.value.city;
+  this.userModelObject.state = this.signupForm.value.state;
   this.userModelObject.password = this.signupForm.value.password;
 
   this.userService.postUser(this.userModelObject).subscribe(res=>{

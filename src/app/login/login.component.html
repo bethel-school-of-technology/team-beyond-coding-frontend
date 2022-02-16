@@ -6,8 +6,7 @@
                 <div class="header">
                     <h1>Login Here!</h1>
                 </div>
-                <form>
-                    <form class="form-container">
+                    <form class="form-container" [formGroup]="loginForm" (ngSubmit)="login()">
                         <div>
                             <label for="insertEmail" class="form-label">Email  </label>
                             <input formControlName="email" type="email" class="form-label" id="insertEmail">
@@ -19,10 +18,10 @@
                             <br>
                         </div>
                         <button type="button" routerLink="" id="cancel" class="btn">Close</button>
-                        <button type="button"  routerLink="profile" class="btn">Login</button>
+                        <button type="button"   class="btn">Login</button>
                     </form>
-                    <a routerLink="/signup">Not Registered Yet? Sign Up Here!</a>
-                </form>
+                    <a routerLink="signup">Not Registered Yet? Sign Up Here!</a>
+
             </div>
         </div>
     </div>

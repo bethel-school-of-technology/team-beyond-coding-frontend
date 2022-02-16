@@ -1,42 +1,49 @@
-<div class="container">
-    <div class="row">
-        <div>
-            <div class="card">
-                <div class="header">
-                    <h1>Sign Up</h1>
-                    <h5>Register here!</h5>
+<div>
+    <div class="background">
+        <div class="row">
+            <div>
+                <div class="card">
+                    <div class="header">
+                        <h1>Sign Up</h1>
+                        <h5>Register here!</h5>
+                    </div>
+                        <form class="form-container" [formGroup]="signupForm">
+                            <div>
+                                <label for="insertFirstName" class="form-label">First Name </label>
+                                <input formControlName="firstName" type="text" class="form-label" id="insertFirstName">
+                            </div>
+                            <div>
+                                <label for="insertLastName" class="form-label">Last Name </label>
+                                <input formControlName="lastName" type="text" class="form-label" id="insertLastName">
+                            </div>
+                            <div>
+                                <label for="insertEmail" class="form-label">Email </label>
+                                <input formControlName="email" type="email" class="form-label" id="insertEmail">
+                            </div>
+                            <div>
+                                <label for="insertAge" class="form-label">Age </label>
+                                <input formControlName="age" type="number" class="form-label" id="insertAge">
+                            </div>
+                            <div>
+                                <label for="insertCity" class="form-label">City </label>
+                                <input formControlName="city" type="location" class="form-label"
+                                    id="insertCity">
+                            </div>
+                            <div>
+                                <label for="insertState" class="form-label">State </label>
+                                <input formControlName="state" type="location" class="form-label"
+                                    id="insertState">
+                            </div>
+                            <div>
+                                <label for="inputPassword" class="form-label">Password </label>
+                                <input formControlName="password" type="password" class="form-label" id="inputPassword">
+                            </div>
+                            <button type="button" routerLink="" id="cancel" class="btn">Close</button>
+                            <button type="button" (click)="postUserDetails()" class="btn">Register</button>
+                        </form>
+                        <a routerLink="/login">Already Registered? Click to Login</a>
+
                 </div>
-                <form>
-                    <form class="form-container" [formGroup]="signupForm">
-                        <div>
-                            <label for="insertFirstName" class="form-label">First Name  </label>
-                            <input formControlName="firstName" type="text" class="form-label" id="insertFirstName">
-                        </div>
-                        <div>
-                            <label for="insertLastName" class="form-label">Last Name  </label>
-                            <input formControlName="lastName" type="text" class="form-label" id="insertLastName">
-                        </div>
-                        <div>
-                            <label for="insertEmail" class="form-label">Email  </label>
-                            <input formControlName="email" type="email" class="form-label" id="insertEmail">
-                        </div>
-                        <div>
-                            <label for="insertAge" class="form-label">Age  </label>
-                            <input formControlName="age" type="number" class="form-label" id="insertAge">
-                        </div>
-                        <div>
-                            <label for="insertLocation" class="form-label">Location  </label>
-                            <input formControlName="location" type="location" class="form-label" id="insertLocation">
-                        </div>
-                        <div>
-                            <label for="inputPassword" class="form-label">Password  </label>
-                            <input formControlName="password" type="password" class="form-label" id="inputPassword">
-                        </div>
-                        <button type="button" routerLink="" id="cancel" class="btn">Close</button>
-                        <button type="button" (click)="postUserDetails()" class="btn">Register</button>
-                    </form>
-                    <a routerLink="/login">Already Registered? Click to Login</a>
-                </form>
             </div>
         </div>
     </div>

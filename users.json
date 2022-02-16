@@ -34,6 +34,34 @@
       "location": "Boston",
       "password": "lavidaloca",
       "id": 1
+    },
+    {
+      "firstName": "test",
+      "lastName": "test1",
+      "email": "test@test1.com",
+      "age": 2,
+      "location": "TX",
+      "password": "lalala",
+      "id": 2
+    },
+    {
+      "firstName": "hi",
+      "lastName": "hi",
+      "email": "hi@hi.com",
+      "age": 3,
+      "location": "TX",
+      "password": "hi",
+      "id": 3
+    },
+    {
+      "firstName": "Steven",
+      "lastName": "Zunino",
+      "email": "szunino@gmail.com",
+      "age": 59,
+      "city": "Pocasset",
+      "state": "MA",
+      "password": "boss302",
+      "id": 4
     }
   ]
 }
