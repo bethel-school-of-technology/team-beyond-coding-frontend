@@ -16,6 +16,9 @@
 
 }
 
+.mat-menu-panel.myMenu {
+   margin-top: -100px;
+}
 .btn {
   color: white;
   padding: 5px 10px;
@@ -25,10 +28,10 @@
   transition: .5s;
   font-weight: bold;
   font-size: 17px;
-  border: 1px solid;
+
   font-family: inherit;
   z-index: 1;
-  border: 2px solid #2b2d42;
+  background: #8D99AE;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -43,8 +46,8 @@
   position: absolute;
   border-radius: 50%;
   z-index: -1;
-  background-color: white;
-  color: black;
+  background-color: #2b2d42;
+  color: white;
   transition: 1s ease;
 }
 
@@ -59,7 +62,7 @@
 }
 
 .btn:hover {
-  color: #2b2d42;
+  color: white;
 }
 
 .btn:active {

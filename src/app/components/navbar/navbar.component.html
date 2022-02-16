@@ -8,9 +8,9 @@
     {{item.label}}
   </button>
 <ng-container>
-  <button mat-icon-button [matMenuTriggerFor]="dropMenu" yPosition="above" class="btn"><fa-icon [icon]="faBars" size="2x" class="fa-bars"></fa-icon></button>
+  <button mat-icon-button [matMenuTriggerFor]="dropMenu"  class="btn"><fa-icon [icon]="faBars" size="2x" class="fa-bars"></fa-icon></button>
 
-   <mat-menu #dropMenu="matMenu"> 
+   <mat-menu [overlapTrigger]="false" #dropMenu="matMenu" yPosition="above" xPosition="before"> 
    
   <ng-container *ngFor="let item of menuItems"> 
       <div [fxShow]="!item.showOnDesktop" [fxShow.sm]="!item.showOnTablet" [fxShow.xs]="!item.showOnMobile">

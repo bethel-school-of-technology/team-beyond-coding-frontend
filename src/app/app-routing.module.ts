@@ -17,7 +17,7 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'profile',
+    path: 'profile/user/:id',
     component: ProfileComponent,
     children: [
       {
@@ -31,8 +31,7 @@ const routes: Routes = [
       {
         path: 'update/bike/:bikeID',
         component: UpdatebikeComponent,
-      }
-    
+      },
     ],
   },
   {
