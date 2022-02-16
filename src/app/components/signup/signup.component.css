@@ -1,11 +1,10 @@
 
-/* .container{
+.container{
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: inherit;
-   
-} */
+} 
 
 .background {
     display: flex;
@@ -20,7 +19,7 @@
 
 }
 .card{
-     padding: 100px;
+    margin-left: 450px;
     display: flex;
     justify-content: center;
     align-items: center; 
