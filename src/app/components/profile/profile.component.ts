@@ -5,8 +5,8 @@ import { faUsersCog } from '@fortawesome/free-solid-svg-icons';
 import { Bike } from 'src/app/models/bike/bike';
 import { faMotorcycle } from '@fortawesome/free-solid-svg-icons';
 import { BikeService } from 'src/app/services/bike.service';
-// import { User } from 'src/app/models/user/user';
-
+import { User } from 'src/app/models/user/user';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-profile',
@@ -20,20 +20,17 @@ export class ProfileComponent implements OnInit {
   bikeList: Bike[] = [];
   bikeID: number;
 
+  userId: number;  
+  currentUser: User = new User();
 
-  UserName = 'Username';
-  UserId = '00';
-  FullName = 'Placeholder';
-  City = 'Placeholder';
-  State = 'Placeholder';
-  Birthday = '12/3456';
-  Email = 'Placeholder';
 
   
   constructor(
     private actRoute: ActivatedRoute,
     private myBikeService: BikeService,
-    private router: Router
+    private router: Router,
+    private user : User,
+    private userService : UsersService
   ) {}
 
   ngOnInit(): void {
@@ -41,8 +38,17 @@ export class ProfileComponent implements OnInit {
       console.log(response);
       this.bikeList = response;
     });
+
+    this.actRoute.params.subscribe((params) => {
+      this.userId= +params['userId']
+    
+    this.userService.getOneUser(this.userId).subscribe((response) => {
+      console.log(response);
+      this.currentUser = response;
+    })});
+    
+  
+   
   }
-  pageRefresh() {
-    window.location.reload();
-  }
+
 }

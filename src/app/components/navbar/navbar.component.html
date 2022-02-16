@@ -1,4 +1,6 @@
 
+
+
 <mat-toolbar class="toolbar" fxLayout="row"> 
   <span class="group-ride-text"fxFlex>Group Ride</span>
   <button mat-button *ngFor="let item of menuItems" [fxShow]="item.showOnDesktop" [fxShow.xs]="item.showOnMobile"
@@ -6,7 +8,7 @@
     {{item.label}}
   </button>
 <ng-container>
-  <button mat-icon-button [matMenuTriggerFor]="dropMenu" class="btn"><fa-icon [icon]="faBars" size="2x" class="fa-bars"></fa-icon></button>
+  <button mat-icon-button [matMenuTriggerFor]="dropMenu" yPosition="above" class="btn"><fa-icon [icon]="faBars" size="2x" class="fa-bars"></fa-icon></button>
 
    <mat-menu #dropMenu="matMenu"> 
    

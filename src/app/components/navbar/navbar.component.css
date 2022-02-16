@@ -3,7 +3,7 @@
   .group-ride-text {
     transform: rotate(360deg);
     font-size: 28px;
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Rock Salt', sans-serif;
     color: #ffb703;
 }
 
@@ -17,9 +17,8 @@
 }
 
 .btn {
-  color: #2b2d42;
+  color: white;
   padding: 5px 10px;
-  background-image: linear-gradient( #edf2f4 5%, #8d99ae 90% );
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -30,7 +29,7 @@
   font-family: inherit;
   z-index: 1;
   border: 2px solid #2b2d42;
-  border-radius: 3px;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
 
@@ -44,7 +43,8 @@
   position: absolute;
   border-radius: 50%;
   z-index: -1;
-  background-color: #ffb703;
+  background-color: white;
+  color: black;
   transition: 1s ease;
 }
 

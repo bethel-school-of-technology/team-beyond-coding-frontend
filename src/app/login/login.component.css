@@ -7,25 +7,59 @@
 }
 
 .card{
-    margin-top: 20px;
-    border: 5px #2B2D42;
-    width: 700px;
-    height: 600px;
-    padding: 40px;
-    top: 50%;
-    Left: 50%;
+    margin-left: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column; 
+    flex-wrap: wrap;
+    margin-top: 100px;
+    font-size: 16px;
+    width: 500px;
+    height: 500px;
     background: #8D99AE;
     color: white;
     font-family: inherit;
-    text-align: center;
-    justify-content: center;
     border-radius: 40px;
-    align-items: stretch;
-
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  
 }
 
 .form-container{
     color: white;
-    text-align: center;
-    
+
+}
+
+.form-label{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.btn{
+    margin-top: 5px;
+    margin-bottom: 7px;
+    margin-left: 2px;
+    margin-right: 2px;
+    justify-content: center;
+    color: white;
+    background-color: #2B2D42;
+    border-radius: 5px;
+    width: 80px;
+    height: 25px;
+    font-size: 14px;
+    transition-duration: 0.4s;
+
+}
+
+.btn:hover{
+    background-color: white;
+    color: black;
+
+}
+
+.form-label{
+    border: 5px #2B2D42;
+    border-radius: 5px;
+    width: 120px;
+    height: 20px;
 }

@@ -1,52 +1,33 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import {FormGroup, FormBuilder, FormControl } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { User } from '../models/user/user';
+import { UsersService } from '../services/users.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  
+  currentUser: User [];
 
-  public loginForm!: FormGroup
-  public loginGroup!: FormGroup
-  constructor(private formBuilder : FormBuilder, private http : HttpClient, public router : Router) { }
+  userEmail : string;
+  userPassword : any;
+  constructor(private userService : UsersService, private http : HttpClient, private actRoute: ActivatedRoute, public router : Router) { }
 
   ngOnInit(): void {
 
-    this.loginGroup = new FormGroup({
-      email: new FormControl(),
-      password: new FormControl()
-    })
+  }
 
-    this.loginForm = this.formBuilder.group({
-      email: 'placeholder',
-      password: 'placeholder',
+  userLogin(){
+    this.userService.login(this.userEmail).subscribe(response =>{
+      this.router.navigate(['/profile/user/'])
     })
   }
 
 
 
-
-
-  login(){
-    this.http.get<any>('http://localhost:3000/users')
-    .subscribe(res=>{
-      const user = res.find((a:any)=>{
-        return a.email === this.loginForm.value.email && a.password === this.loginForm.value.password
-      });
-      if (user){
-        this.loginForm.reset();
-        this.router.navigate(['/profile'])
-      }
-      else{
-        alert("User not found");
-      }
-    }), err=>{
-      alert("Something went wrong ")
-    }
-  }
 
 
 }

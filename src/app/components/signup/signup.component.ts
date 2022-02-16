@@ -1,10 +1,8 @@
 
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from 'src/app/models/user/user';
 import { UsersService } from 'src/app/services/users.service';
-
 
 
 
@@ -15,54 +13,57 @@ import { UsersService } from 'src/app/services/users.service';
 })
 export class SignupComponent implements OnInit {
   
-  userModelObject: User = new User();
-  userData !: any;
-
-  public signupForm !: FormGroup;
+  newUser: User = new User();
+  userList: User[] = [];
   
-  constructor(private formBuilder: FormBuilder, 
-  private userService : UsersService,
+  constructor(private userService : UsersService,
   private router : Router ){ }
+    
+ 
 
   ngOnInit(): void {
-    this.signupForm = this.formBuilder.group({
-      firstName: '',
-      lastName:'',
-      email:'',
-      age:'',
-      city:'',
-      state: '',
-      password: ''
+    this.userService.getAllUsers().subscribe((response) => {
+      console.log(response);
+      this.userList = response;
+    });
+  }
 
-    })
+  postUser() {
+    this.userService.postUser(this.newUser).subscribe((response) => {
+      this.router.navigate(['profile/user/' + (this.userList.length + 1)])
+    });
+  }
+
+  userInfo() {
+    console.log(this.userList.length + 1);
+  }
   }
 
 
+// postUserDetails(){
+//   this.newUser.firstName = this.signupForm.value.firstName;
+//   this.newUser.lastName = this.signupForm.value.lastName;
+//   this.newUser.email = this.signupForm.value.email;
+//   this.newUser.age = this.signupForm.value.age;
+//   this.newUser.city = this.signupForm.value.city;
+//   this.newUser.state = this.signupForm.value.state;
+//   this.newUser.password = this.signupForm.value.password;
 
-postUserDetails(){
-  this.userModelObject.firstName = this.signupForm.value.firstName;
-  this.userModelObject.lastName = this.signupForm.value.lastName;
-  this.userModelObject.email = this.signupForm.value.email;
-  this.userModelObject.age = this.signupForm.value.age;
-  this.userModelObject.city = this.signupForm.value.city;
-  this.userModelObject.state = this.signupForm.value.state;
-  this.userModelObject.password = this.signupForm.value.password;
+//   this.userService.postUser(this.newUser).subscribe(res=>{
+//     console.log(res);
+//     alert("User Added Successfully!")
+//     this.router.navigate(["profile/users/"])
+//   },
+//   err=>{
+//     alert("Something went wrong.")
+//   })
+// }
 
-  this.userService.postUser(this.userModelObject).subscribe(res=>{
-    console.log(res);
-    alert("User Added Successfully!")
-    this.router.navigate(["profile"])
-  },
-  err=>{
-    alert("Something went wrong.")
-  })
-}
-
-getAllUsers(){
-this.userService.getAllUsers()
-.subscribe(res=>
-  this.userData = res
-  )}
+// getAllUsers(){
+// this.userService.getAllUsers()
+// .subscribe(res=>
+//   this.userData = res
+//   )}
   
 // getOneUser(){
 // this.userService.getOneUser(){
@@ -71,13 +72,14 @@ this.userService.getAllUsers()
 //   }
 
 
-deleteUser(row: any){
-this.userService.deleteUser(row.id)
-.subscribe(res=>{
-  alert("User Deleted")
-  this.getAllUsers();
-})
-}
+// deleteUser(row: any){
+// this.userService.deleteUser(row.id)
+// .subscribe(res=>{
+//   alert("User Deleted")
+//   this.getAllUsers();
+// })
+// }
 
 
-}
+
+

@@ -62,6 +62,36 @@
       "state": "MA",
       "password": "boss302",
       "id": 4
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "age": "",
+      "city": "",
+      "state": "",
+      "password": "",
+      "id": 5
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "age": null,
+      "city": "",
+      "state": "",
+      "password": "",
+      "id": 6
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "age": null,
+      "city": "",
+      "state": "",
+      "password": "",
+      "id": 7
     }
   ]
 }
