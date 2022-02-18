@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
 
 
 #cdk-overlay-0{
@@ -6,11 +6,12 @@
   top: 50px;
 }
 
-  .group-ride-text {
-    transform: rotate(360deg);
-    font-size: 28px;
-    font-family: 'Rock Salt', sans-serif;
-    color: #ffb703;
+.group-ride-text {
+  transform: rotate(360deg);
+  font-size: 28px;
+  font-family: 'Rock Salt', cursive;
+  color: #ffb703;
+
 }
 
 .toolbar{

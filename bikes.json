@@ -1,18 +1,11 @@
 {
   "bikes": [
     {
-      "type": "Scrambler",
-      "make": "Sokia",
-      "model": "S87mx",
-      "engineSize": "800cc",
-      "id": 1
-    },
-    {
-      "type": "Minibike",
+      "type": "Cruiser",
       "make": "russia",
-      "model": "cheap",
+      "model": "ice-blue",
       "engineSize": "medium",
-      "id": 2
+      "id": 1
     }
   ]
 }

@@ -24,12 +24,14 @@ export class UpdatebikeComponent implements OnInit {
     this.actRoute.params.subscribe((params) => {
       this.bikeID = +params['bikeID'];
     this.myBikeService.getOneBike(this.bikeID).subscribe((response) => {
+      
       this.editBike = response;
       });
     });
   }
   updateBike(){
     this.myBikeService.updateBike(this.bikeID, this.editBike).subscribe(response =>{
+      this.myBikeService.refreshBikes$.next(true);
       this.router.navigate(['profile/bike/' + this.bikeID]);
     })
   }
