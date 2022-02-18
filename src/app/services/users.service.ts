@@ -21,14 +21,11 @@ export class UsersService {
     return this.http.post<User>(this.userUrl, newUser);
   }
 
-  login(email: string) : Observable<User>{
-    return this.http.get<User>(`${this.userUrl}/${email}`);
+  
+  getAllUsers():Observable<User[]>{
+    return this.http.get<User[]>(this.userUrl)
   }
-
-
-    // getAllUsers(): Observable<User[]> {
-  //   return this.http.get<User[]>(this.userUrl);
-  // }
+ 
 
   // deleteUser(deleteID: number): Observable<any>{
   //   return this.http.delete<any>(`${this.userUrl}/${deleteID}`)

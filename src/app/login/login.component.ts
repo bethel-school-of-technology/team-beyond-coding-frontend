@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { UsersService } from '../services/users.service';
+import { User } from '../models/user/user';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -17,21 +18,19 @@ export class LoginComponent implements OnInit {
   constructor(private userService : UsersService, private http : HttpClient, private actRoute: ActivatedRoute, public router : Router) { }
 
   ngOnInit(): void {
-    this.userService.getAllUsers().subscrube((response) =>{
-      console.log(response);
-      this.userList
-    })
+    this.userService.getAllUsers().subscribe((response) =>{
+      this.userList = response;
+    });
   }
 
   userLogin(){
-    this.userService.login(this.userEmail).subscribe(response =>{
-      this.router.navigate(['/profile/user/'])
-    })
-  }
-
-  navigateTo(){
-    this.router.navigate(['profile/user/' + this.userId])
-  }
+    var currentUser = this.userList.find(user => user.email == this.loginUser.email)
+    if(currentUser.password === this.loginUser.password){
+       this.router.navigate(['profile/user/' + currentUser.id])
+    } else {
+      alert('wrong user information')
+    }  
+   }
 
 
 

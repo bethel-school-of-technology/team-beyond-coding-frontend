@@ -8,11 +8,11 @@
                 </div>
                     <form class="form-container" (ngSubmit)="userLogin()">
                         <div>
-                            <input  type="email" class="form-label" id="insertEmail" placeholder="Enter Email">
+                            <input  type="email" class="form-label" id="insertEmail" placeholder="Enter Email" [(ngModel)]="loginUser.email" [ngModelOptions]="{standalone: true}">
                             <br>
                         </div>
                         <div>
-                            <input type="password" class="form-label" id="inputPassword" placeholder="Enter Password">
+                            <input type="password" class="form-label" id="inputPassword" placeholder="Enter Password" [(ngModel)]="loginUser.password" [ngModelOptions]="{standalone: true}">
                             <br>
                         </div>
                         <button type="button" routerLink="" id="cancel" class="btn">Close</button>
