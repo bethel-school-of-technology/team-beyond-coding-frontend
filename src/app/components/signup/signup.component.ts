@@ -22,42 +22,43 @@ export class SignupComponent implements OnInit {
  
 
   ngOnInit(): void {
-    this.userService.getAllUsers().subscribe((response) => {
-      console.log(response);
-      this.userList = response;
-    });
+
   }
 
   postUser() {
     this.userService.postUser(this.newUser).subscribe((response) => {
-      this.router.navigate(['profile/user/' + (this.userList.length + 1)])
+      this.router.navigate(['profile/user/' + (this.newUser.id)])
     });
   }
 
   userInfo() {
-    console.log(this.userList.length + 1);
+    console.log(this.newUser.id);
   }
+
+  // postUserDetails(){
+  //   this.newUser.firstName = firstName;
+  //   this.newUser.lastName = this.user.value.lastName;
+  //   this.newUser.email = this.signupForm.value.email;
+  //   this.newUser.age = this.signupForm.value.age;
+  //   this.newUser.city = this.signupForm.value.city;
+  //   this.newUser.state = this.signupForm.value.state;
+  //   this.newUser.password = this.signupForm.value.password;
+  
+  //   this.userService.postUser(this.newUser).subscribe(res=>{
+  //     console.log(res);
+  //     alert("User Added Successfully!")
+  //     this.router.navigate(["profile/users/"])
+  //   },
+  //   err=>{
+  //     alert("Something went wrong.")
+  //   })
+  // }
+
+
   }
 
 
-// postUserDetails(){
-//   this.newUser.firstName = this.signupForm.value.firstName;
-//   this.newUser.lastName = this.signupForm.value.lastName;
-//   this.newUser.email = this.signupForm.value.email;
-//   this.newUser.age = this.signupForm.value.age;
-//   this.newUser.city = this.signupForm.value.city;
-//   this.newUser.state = this.signupForm.value.state;
-//   this.newUser.password = this.signupForm.value.password;
 
-//   this.userService.postUser(this.newUser).subscribe(res=>{
-//     console.log(res);
-//     alert("User Added Successfully!")
-//     this.router.navigate(["profile/users/"])
-//   },
-//   err=>{
-//     alert("Something went wrong.")
-//   })
-// }
 
 // getAllUsers(){
 // this.userService.getAllUsers()

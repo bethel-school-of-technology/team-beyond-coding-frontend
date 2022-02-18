@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { User } from '../models/user/user';
 import { UsersService } from '../services/users.service';
 @Component({
   selector: 'app-login',
@@ -10,10 +9,10 @@ import { UsersService } from '../services/users.service';
 })
 export class LoginComponent implements OnInit {
   
-  currentUser: User [];
+  
   userId: number;
   userEmail : string;
-  userPassword : any;
+
   constructor(private userService : UsersService, private http : HttpClient, private actRoute: ActivatedRoute, public router : Router) { }
 
   ngOnInit(): void {

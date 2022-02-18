@@ -1,13 +1,9 @@
 
-/* .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: inherit;
-}  */
 
 .background {
     display: flex;
+    justify-content: center;
+    align-items: center; 
     flex-wrap: wrap;
     min-height: 100%;
     min-width: 1024px;
@@ -18,14 +14,14 @@
     z-index: -1;
 
 }
+
 .card{
-    margin-left: 450px;
     display: flex;
     justify-content: center;
     align-items: center; 
     flex-direction: column; 
     flex-wrap: wrap;
-    margin-top: 100px;
+    margin-top: 10px;
     font-size: 16px;
     width: 500px;
     height: 500px;
@@ -76,4 +72,48 @@
     border-radius: 5px;
     width: 120px;
     height: 20px;
+}
+
+@media screen and (max-width: 768px) and (min-width: 415px){
+    .card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        padding-right: 10px;
+       
+    } 
+    .btn{
+        font-size: 12px;
+        justify-content: center;
+        width: fit-content;
+        height: fit-content;
+    }
+    .form-label{
+        width: 80px;
+        height: auto;
+    }
+   
+}
+
+@media screen and (max-width: 414px) {
+    .card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+       
+       
+    } 
+    .btn{
+        font-size: 10px;
+        justify-content: center;
+        width: fit-content;
+        height: fit-content;
+    }
+    .form-label{
+        width: 80px;
+        height: auto;
+    }
+   
 }

@@ -29,7 +29,6 @@ export class ProfileComponent implements OnInit {
     private actRoute: ActivatedRoute,
     private myBikeService: BikeService,
     private router: Router,
-    private user : User,
     private userService : UsersService
   ) {}
 
@@ -40,12 +39,13 @@ export class ProfileComponent implements OnInit {
     });
 
     this.actRoute.params.subscribe((params) => {
-      this.userId= +params['userId']
+      this.userId= params['id']
     
-    this.userService.getOneUser(this.userId).subscribe((response) => {
-      console.log(response);
-      this.currentUser = response;
-    })});
+      this.userService.getOneUser(this.userId).subscribe((response) => {
+        console.log(response);
+        this.currentUser = response;
+      })
+  });
     
   
    

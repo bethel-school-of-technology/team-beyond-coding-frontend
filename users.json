@@ -64,34 +64,30 @@
       "id": 4
     },
     {
-      "firstName": "",
-      "lastName": "",
-      "email": "",
-      "age": "",
-      "city": "",
-      "state": "",
-      "password": "",
       "id": 5
     },
     {
-      "firstName": "",
-      "lastName": "",
-      "email": "",
-      "age": null,
-      "city": "",
-      "state": "",
-      "password": "",
       "id": 6
     },
     {
-      "firstName": "",
-      "lastName": "",
-      "email": "",
-      "age": null,
-      "city": "",
-      "state": "",
-      "password": "",
+      "email": "c@c.com",
+      "password": "f",
+      "firstName": "a",
+      "lastName": "b",
+      "age": 3,
+      "city": "d",
+      "state": "e",
       "id": 7
+    },
+    {
+      "email": "c@c.com",
+      "password": "pass",
+      "firstName": "f",
+      "lastName": "d",
+      "age": 5,
+      "city": "R",
+      "state": "CA",
+      "id": 8
     }
   ]
 }

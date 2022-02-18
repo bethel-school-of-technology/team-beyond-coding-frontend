@@ -8,40 +8,40 @@
                         <h1>Sign Up</h1>
                         
                     </div>
-                        <form class="form-container" (ngSubmit)="postUser()">
+                        <form class="form-container" (ngSubmit)="postUser()" >
                             <div>
                                 <label for="insertFirstName" class="form-label">First Name </label>
-                                <input [(ngModel)]="newUser.firstName" required type="text" class="form-label" id="insertFirstName">
+                                <input [(ngModel)]="newUser.firstName" name="firstName" required type="text" class="form-label" id="insertFirstName">
                             </div>
                             <div>
                                 <label for="insertLastName" class="form-label">Last Name </label>
-                                <input [(ngModel)]="newUser.lastName" type="text" class="form-label" id="insertLastName">
+                                <input [(ngModel)]="newUser.lastName" type="text" name="lastName" class="form-label" id="insertLastName">
                             </div>
                             <div>
                                 <label for="insertEmail" class="form-label">Email </label>
-                                <input [(ngModel)]="newUser.email" type="email" class="form-label" id="insertEmail">
+                                <input [(ngModel)]="newUser.email" type="email" name="email" class="form-label" id="insertEmail">
                             </div>
                             <div>
                                 <label for="insertAge" class="form-label">Age </label>
-                                <input [(ngModel)]="newUser.age" type="number" class="form-label" id="insertAge">
+                                <input [(ngModel)]="newUser.age" type="number" name="age" class="form-label" id="insertAge">
                             </div>
                             <div>
                                 <label for="insertCity" class="form-label">City </label>
-                                <input  [(ngModel)]="newUser.city" type="text" class="form-label"
+                                <input  [(ngModel)]="newUser.city" type="text" name="city" class="form-label"
                                     id="insertCity">
                             </div>
                             <div>
                                 <label for="insertState" class="form-label">State </label>
-                                <input [(ngModel)]="newUser.state" type="text" class="form-label" id="insertState">
+                                <input [(ngModel)]="newUser.state" type="text" name="state" class="form-label" id="insertState">
                             </div>
                             <div>
                                 <label for="inputPassword" class="form-label">Password </label>
-                                <input [(ngModel)]="newUser.password" type="password" class="form-label" id="inputPassword">
+                                <input [(ngModel)]="newUser.password" type="password" name="password" class="form-label" id="inputPassword">
                             </div>
-                            <button type="submit" routerLink="home" id="cancel" class="btn">Close</button>
-                            <button type="submit" (click)="userInfo()" class="btn">Register</button>
+                            <button type="button" routerLink="" id="cancel" class="btn">Close</button>
+                            <button type="submit" class="btn">Register</button>
                         </form>
-                        <a routerLink="/login">Already Registered? Click to Login</a>
+                        <a routerLink="login">Already Registered? Click to Login</a>
 
                 </div>
             </div>
