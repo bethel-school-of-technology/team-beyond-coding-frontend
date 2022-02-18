@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
 
+
+#cdk-overlay-0{
+  z-index: 0;
+  top: 50px;
+}
+
   .group-ride-text {
     transform: rotate(360deg);
     font-size: 28px;
@@ -16,9 +22,6 @@
 
 }
 
-.mat-menu-panel.myMenu {
-   margin-top: -100px;
-}
 .btn {
   color: white;
   padding: 5px 10px;
@@ -71,5 +74,10 @@
 
 .mat-icon-button{
   width: 45px;
-  height: 50px;
+  height: 45px;
+  margin: 1px;
+}
+
+.mat-button{
+  margin: 1px;
 }

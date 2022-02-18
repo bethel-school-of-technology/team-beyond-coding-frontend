@@ -1,20 +1,19 @@
 
 
-
 <mat-toolbar class="toolbar" fxLayout="row"> 
   <span class="group-ride-text"fxFlex>Group Ride</span>
   <button mat-button *ngFor="let item of menuItems" [fxShow]="item.showOnDesktop" [fxShow.xs]="item.showOnMobile"
-    [fxShow.sm]="item.showOnTablet" [routerLink]='item.route' class="btn">
+    [fxShow.sm]="item.showOnTablet" [routerLink]='item.route' routerLinkActive="active" class="btn">
     {{item.label}}
   </button>
 <ng-container>
-  <button mat-icon-button [matMenuTriggerFor]="dropMenu"  class="btn"><fa-icon [icon]="faBars" size="2x" class="fa-bars"></fa-icon></button>
+  <button mat-icon-button [matMenuTriggerFor]="navbar"  class="btn"><fa-icon [icon]="faBars" size="2x" class="fa-bars"></fa-icon></button>
 
-   <mat-menu [overlapTrigger]="false" #dropMenu="matMenu" yPosition="below" xPosition="before"> 
+   <mat-menu yPosition="below" xPosition="before" [overlapTrigger]='false' #navbar="matMenu"> 
    
   <ng-container *ngFor="let item of menuItems"> 
       <div [fxShow]="!item.showOnDesktop" [fxShow.sm]="!item.showOnTablet" [fxShow.xs]="!item.showOnMobile">
-        <button class="btn" mat-menu-item [routerLink]='item.route' >{{item.label}}</button>
+        <button class="btn" mat-menu-item [routerLink]='item.route' routerLinkActive="active" >{{item.label}}</button>
         <mat-divider></mat-divider>
       </div>
     </ng-container>

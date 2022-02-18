@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
     if(currentUser.password === this.loginUser.password){
        this.router.navigate(['profile/user/' + currentUser.id])
     } else {
-      alert('wrong user information')
+      alert('Wrong User Information')
     }  
    }
 
