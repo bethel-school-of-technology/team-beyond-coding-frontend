@@ -9,14 +9,18 @@ import { UsersService } from '../services/users.service';
 })
 export class LoginComponent implements OnInit {
   
-  
+  loginUser: User = new User ();
   userId: number;
   userEmail : string;
+  userList: User[];
 
   constructor(private userService : UsersService, private http : HttpClient, private actRoute: ActivatedRoute, public router : Router) { }
 
   ngOnInit(): void {
-
+    this.userService.getAllUsers().subscrube((response) =>{
+      console.log(response);
+      this.userList
+    })
   }
 
   userLogin(){
