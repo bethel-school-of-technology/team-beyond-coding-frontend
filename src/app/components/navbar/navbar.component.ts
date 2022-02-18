@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 
-
  interface MenuItem {
   label: string;
   route: string;
@@ -40,18 +39,15 @@ menuItems : MenuItem[]= [
      showOnMobile: false,
     showOnTablet: false,
      showOnDesktop: true
-   },
-   {
-    label: 'Events',
-    route: 'events',
-    showOnMobile: false,
-    showOnTablet: false,
-    showOnDesktop: true
- }
+   }
+
+ 
   ]
 
-  constructor() { }
 
+
+  constructor() { }
+  
   ngOnInit(): void {
   }
 

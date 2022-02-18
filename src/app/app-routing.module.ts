@@ -6,6 +6,8 @@ import { AddbikeComponent } from './components/profile/garage/addbike/addbike.co
 import { ViewbikeComponent } from './components/profile/garage/viewbike/viewbike.component';
 import { HomeComponent } from './components/home/home.component';
 import { UpdatebikeComponent } from './components/profile/garage/updatebike/updatebike.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -15,7 +17,7 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'profile',
+    path: 'profile/user/:id',
     component: ProfileComponent,
     children: [
       {
@@ -32,6 +34,14 @@ const routes: Routes = [
       }
     ],
   },
+  {
+    path: 'signup',
+    component: SignupComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+  }
 ];
 
 

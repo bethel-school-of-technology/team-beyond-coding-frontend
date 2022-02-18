@@ -5,8 +5,8 @@ import { faUsersCog } from '@fortawesome/free-solid-svg-icons';
 import { faMotorcycle } from '@fortawesome/free-solid-svg-icons';
 import { Bike } from 'src/app/models/bike/bike';
 import { BikeService } from 'src/app/services/bike.service';
-
-
+import { User } from 'src/app/models/user/user';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-profile',
@@ -64,18 +64,16 @@ export class ProfileComponent implements OnInit {
     },
   ];
 
-  UserName = 'Username';
-  UserId = '00';
-  FullName = 'Placeholder';
-  City = 'Placeholder';
-  State = 'Placeholder';
-  Age = 30;
-  Email = 'Placeholder';
+  userId: number;  
+  currentUser: User = new User();
+
+
 
   constructor(
     private actRoute: ActivatedRoute,
     private myBikeService: BikeService,
-    private router: Router
+    private router: Router,
+    private userService : UsersService
   ) {}
 
   ngOnInit(): void {
@@ -85,6 +83,15 @@ export class ProfileComponent implements OnInit {
         this.bikeList = response;
       });
     });
+
+    this.actRoute.params.subscribe((params) => {
+      this.userId= params['id']
+    
+      this.userService.getOneUser(this.userId).subscribe((response) => {
+        console.log(response);
+        this.currentUser = response;
+      })
+  });
   }
   toggle() {
     if (this.toggleData === 'Private') {
@@ -94,3 +101,4 @@ export class ProfileComponent implements OnInit {
     }
   }
 }
+

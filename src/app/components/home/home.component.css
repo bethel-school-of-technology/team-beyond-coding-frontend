@@ -161,13 +161,16 @@ button:hover .button-text {
 }
 .bike2 {
     width: 354px;
+
     height: 237px;
+
     object-fit: contain;
     box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 12px 5px 15px 5px rgba(0,0,0,0);
 }
 .information h4 {
     color: #ffb703;
     padding: 40px 20px 15px 20px;
+
 }
 .information h3 {
     padding-left: 20px;
@@ -183,6 +186,7 @@ button:hover .button-text {
 }
 .four-info-container {
     padding: 20px 20px 40px 40px;
+
     
 }
 .four-info-container h3 {
@@ -241,6 +245,7 @@ button:hover .button-text {
     .sec2-container {
         background: linear-gradient(to bottom, #2b2d42 0%, #8d99ae 60% );
     }
+
     .info-container {
         flex-direction: row;
         justify-content: center;
@@ -253,6 +258,7 @@ button:hover .button-text {
     .information h4 {
         padding-top: 0;
     }
+
     .align-container {
         width: 100%;
     }

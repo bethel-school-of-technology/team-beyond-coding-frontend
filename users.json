@@ -1,0 +1,93 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "firstName": "Michelle",
+      "lastName": "Dooley",
+      "email": "michelledooley@gmail.com",
+      "age": "36",
+      "location": "Las Vegas, NV",
+      "password": "12345",
+      "id": 0
+    },
+    {
+      "firstName": "Amy",
+      "lastName": "Zunino",
+      "email": "amy.zunino@gmail.com",
+      "age": 222,
+      "location": "Boston",
+      "password": "lavidaloca",
+      "id": 1
+    },
+    {
+      "firstName": "test",
+      "lastName": "test1",
+      "email": "test@test1.com",
+      "age": 2,
+      "location": "TX",
+      "password": "lalala",
+      "id": 2
+    },
+    {
+      "firstName": "hi",
+      "lastName": "hi",
+      "email": "hi@hi.com",
+      "age": 3,
+      "location": "TX",
+      "password": "hi",
+      "id": 3
+    },
+    {
+      "firstName": "Steven",
+      "lastName": "Zunino",
+      "email": "szunino@gmail.com",
+      "age": 59,
+      "city": "Pocasset",
+      "state": "MA",
+      "password": "boss302",
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "email": "c@c.com",
+      "password": "f",
+      "firstName": "a",
+      "lastName": "b",
+      "age": 3,
+      "city": "d",
+      "state": "e",
+      "id": 7
+    },
+    {
+      "email": "c@c.com",
+      "password": "pass",
+      "firstName": "f",
+      "lastName": "d",
+      "age": 5,
+      "city": "R",
+      "state": "CA",
+      "id": 8
+    }
+  ]
+}

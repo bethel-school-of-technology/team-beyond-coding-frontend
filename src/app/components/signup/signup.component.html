@@ -1,0 +1,52 @@
+ <app-navbar></app-navbar> 
+<div>
+    <div class="background">
+        <div class="row">
+            <div>
+                <div class="card">
+                    <div class="header">
+                        <h1>Sign Up</h1>
+                        
+                    </div>
+                        <form class="form-container" (ngSubmit)="postUser()" >
+                            <div>
+                                <label for="insertFirstName" class="form-label"></label>
+                                <input [(ngModel)]="newUser.firstName" name="firstName" required type="text" class="form-label" placeholder="First Name" id="insertFirstName">
+                            </div>
+                            <div>
+                                <label for="insertLastName" class="form-label"></label> 
+                                <input [(ngModel)]="newUser.lastName" type="text" name="lastName" placeholder="Last Name" class="form-label" id="insertLastName">
+                            </div>
+                            <div>
+                                <label for="insertEmail" class="form-label"></label>
+                                <input [(ngModel)]="newUser.email" type="email" name="email" placeholder="Email" class="form-label" id="insertEmail">
+                            </div>
+                            <div>
+                                <label for="insertAge" class="form-label"></label>
+                                <input [(ngModel)]="newUser.age" type="number" name="age" placeholder="Age" class="form-label" id="insertAge">
+                            </div>
+                            <div>
+                                <label for="insertCity" class="form-label"></label>
+                                <input  [(ngModel)]="newUser.city" type="text" name="city" class="form-label" placeholder="City"
+                                    id="insertCity">
+                            </div>
+                            <div>
+                                <label for="insertState" class="form-label"></label>
+                                <input [(ngModel)]="newUser.state" type="text" name="state" placeholder="State" class="form-label" id="insertState">
+                            </div>
+                            <div>
+                                <label for="inputPassword" class="form-label"></label>
+                                <input [(ngModel)]="newUser.password" type="password" name="password" placeholder="Password" class="form-label" id="inputPassword">
+                                <br>
+                            </div>
+                            <button type="button" routerLink="" id="cancel" class="btn">Close</button>
+                            <button type="submit" class="btn">Register</button>
+                        </form>
+                        <br>
+                        <a href="http://localhost:4200/login">Already Registered? Click to Login</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
