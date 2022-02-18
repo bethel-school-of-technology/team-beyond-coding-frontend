@@ -11,9 +11,9 @@
             <div class="user-setting-container">
                 <div class="username-id">
                     <!-- --------user Username---------- -->
-                    <h1 class="username">{{UserName}}</h1>
+                    <h1 class="username">{{currentUser.email}}</h1>
                     <!-- --------user Id--------- --->
-                    <h3 class="user-id">User_ID: {{UserId}}</h3>
+                    <h3 class="user-id">User_ID: {{currentUser.id}}</h3>
                 </div>
                 
                 <div class="setting">
@@ -41,27 +41,27 @@
                 <!-- --------user personal info---------- -->
                 <div class="info-sec1">
                     <label for="FullName" class="info-sec-title">Full Name</label>
-                    <div name="FullName" class="info">{{FullName}}</div>
+                    <div name="FullName" class="info">{{currentUser.firstName}} {{currentUser.lastName}}</div>
                 </div>
                 <div class="info-sec2-3">
                     <div class="info-sec2">
                         <div class="city-container">
                             <label for="City" class="info-sec-title">City</label>
-                            <div name="City" class="info">{{City}}</div>  
+                            <div name="City" class="info">{{currentUser.city}}</div>  
                         </div>
                         <div class="state-container">
                             <label for="State" class="info-sec-title">State</label>
-                            <div name="State" class="info">{{State}}</div>
+                            <div name="State" class="info">{{currentUser.state}}</div>
                         </div>
                     </div>
                     <div class="info-sec3">
                         <div class="birthday-container">
                             <label for="Age" class="info-sec-title">Age</label>
-                            <div name="Age" class="info">{{Age}}</div>
+                            <div name="Age" class="info">{{currentUser.age}}</div>
                         </div>
                         <div class="email-container">
                             <label for="Email" class="info-sec-title">Email</label>
-                            <div name="Email" class="info">{{Email}}</div>
+                            <div name="Email" class="info">{{currentUser.email}}</div>
                         </div>
                     </div>
                 </div>
