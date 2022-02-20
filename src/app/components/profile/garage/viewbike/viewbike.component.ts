@@ -12,6 +12,7 @@ export class ViewbikeComponent implements OnInit {
   currentBike: Bike = new Bike();
 
   bikeID: number;
+  currentId: number;
 
   constructor(
     private actRoute: ActivatedRoute,
@@ -27,14 +28,15 @@ export class ViewbikeComponent implements OnInit {
       this.currentBike = response;
     });
    })
+   this.currentId = this.myBikeService.getOption();
   }
   deleteBike(id: number){
     this.myBikeService.deleteBike(id).subscribe(response => {
       this.myBikeService.refreshBikes$.next(true);
-      this.router.navigate(["profile"])
+      this.router.navigate(["profile/user/" + this.currentId])
     })
   }
   navigateTo(){
-    this.router.navigate(['profile/update/bike/' + this.bikeID])
+    this.router.navigate(['profile/user/'+ this.currentId +'/update/bike/' + this.bikeID])
   }
 }

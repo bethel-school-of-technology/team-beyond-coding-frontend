@@ -11,7 +11,7 @@ import { BikeService } from 'src/app/services/bike.service';
 export class UpdatebikeComponent implements OnInit {
   
   editBike: Bike = new Bike();
-
+  currentId: number;
   bikeID: number;
 
   constructor(
@@ -28,11 +28,12 @@ export class UpdatebikeComponent implements OnInit {
       this.editBike = response;
       });
     });
+    this.currentId = this.myBikeService.getOption();
   }
   updateBike(){
     this.myBikeService.updateBike(this.bikeID, this.editBike).subscribe(response =>{
       this.myBikeService.refreshBikes$.next(true);
-      this.router.navigate(['profile/bike/' + this.bikeID]);
+      this.router.navigate(['profile/user/'+ this.currentId +'/bike/' + this.bikeID]);
     })
   }
 }

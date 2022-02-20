@@ -79,17 +79,16 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
     this.myBikeService.refreshBikes$.subscribe(() => {
       this.myBikeService.getAllBikes().subscribe((response) => {
-        console.log(response);
+        //console.log(response);
         this.bikeList = response;
       });
     });
 
     this.actRoute.params.subscribe((params) => {
       this.userId= params['id']
-    
       this.userService.getOneUser(this.userId).subscribe((response) => {
-        console.log(response);
         this.currentUser = response;
+        this.myBikeService.setOption(this.currentUser.id);
       })
   });
   }

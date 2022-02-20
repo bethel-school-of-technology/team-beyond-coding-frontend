@@ -29,4 +29,11 @@ export class BikeService {
   updateBike(editID: number, edittedInfo: Bike): Observable<Bike> {
     return this.http.put<Bike>(`${this.myBikeURL}/${editID}`, edittedInfo);
   }
+  private currentUserId:number;
+  setOption(value) {
+    this.currentUserId = value;
+  }
+  getOption() {
+    return this.currentUserId;
+  }
 }
