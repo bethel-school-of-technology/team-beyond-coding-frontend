@@ -7,7 +7,7 @@ import { ViewbikeComponent } from './components/profile/garage/viewbike/viewbike
 import { HomeComponent } from './components/home/home.component';
 import { UpdatebikeComponent } from './components/profile/garage/updatebike/updatebike.component';
 import { SignupComponent } from './components/signup/signup.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 

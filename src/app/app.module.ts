@@ -16,7 +16,7 @@ import { CaruselComponent } from './components/profile/carusel/carusel.component
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ReactiveFormsModule }  from '@angular/forms';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './components/login/login.component';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatMenuModule} from '@angular/material/menu';

@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { UsersService } from '../services/users.service';
-import { User } from '../models/user/user';
+import { UsersService } from '../../services/users.service';
+import { User } from '../../models/user/user';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
