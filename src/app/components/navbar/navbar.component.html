@@ -1,6 +1,6 @@
 
 
-<mat-toolbar class="toolbar" fxLayout="row"> 
+<!-- <mat-toolbar class="toolbar" fxLayout="row"> 
   <span class="group-ride-text"fxFlex>Group Ride</span>
   <button mat-button *ngFor="let item of menuItems" [fxShow]="item.showOnDesktop" [fxShow.xs]="item.showOnMobile"
     [fxShow.sm]="item.showOnTablet" [routerLink]='item.route' routerLinkActive="active" class="btn">
@@ -19,4 +19,15 @@
     </ng-container>
   </mat-menu>
 </ng-container>
-</mat-toolbar> 
+</mat-toolbar>  -->
+
+<header> 
+  <span class="group-ride-text">Group Ride</span>
+  <ng-container class="button-container">
+  <button *ngFor="let item of menuItems" [routerLink]="item.route" class="btn">{{item.label}}</button>
+  </ng-container>
+  <ng-container class="iconContainer">
+    <button class="btn"><fa-icon [icon]="faBars" size="2x"  class="fa-bars"></fa-icon></button>
+  </ng-container>
+
+</header>

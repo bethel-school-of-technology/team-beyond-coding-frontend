@@ -1,25 +1,77 @@
 
 
 
-#cdk-overlay-0{
-  z-index: 0;
-  top: 50px;
+header{
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #EDF2F4;
+ justify-content: space-between;
 }
+
+.button-container{
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-container{
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
 
 .group-ride-text {
   transform: rotate(360deg);
+  justify-content: flex-start;
   font-size: 28px;
   font-family: 'Rock Salt', cursive;
   color: #ffb703;
 
 }
 
-.toolbar{
-  background-color: black;
-}
 
 .fa-bars{
   display: flex-end;
+
+}
+
+@media screen and (max-width: 768px) and (min-width: 420px){
+  .header{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+     
+  } 
+  .btn{
+      font-size: 10px;
+      justify-content: center;
+      width: fit-content;
+      height: fit-content;
+  }
+
+}
+
+@media screen and (max-width: 414px) {
+  .header{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 11px;
+      width: 300px;
+      height: 300px;
+     
+  } 
+  .btn{
+      font-size: 7px;
+      justify-content: center;
+      width: fit-content;
+      height: fit-content;
+
+  }
 
 }
 
@@ -32,7 +84,6 @@
   transition: .5s;
   font-weight: bold;
   font-size: 17px;
-
   font-family: inherit;
   z-index: 1;
   background: #8D99AE;
@@ -73,12 +124,3 @@
   filter: brightness(1.3);
 }
 
-.mat-icon-button{
-  width: 45px;
-  height: 45px;
-  margin: 1px;
-}
-
-.mat-button{
-  margin: 1px;
-}

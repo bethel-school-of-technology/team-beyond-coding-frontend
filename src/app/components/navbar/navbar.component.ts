@@ -39,14 +39,27 @@ menuItems : MenuItem[]= [
      showOnMobile: false,
     showOnTablet: false,
      showOnDesktop: true
+   },
+   {
+    label: 'Events',
+    route: 'events',
+      showOnMobile: false,
+     showOnTablet: false,
+      showOnDesktop: true
+   },
+   {
+    label: 'Learn More',
+    route: 'learnMore',
+      showOnMobile: false,
+     showOnTablet: false,
+      showOnDesktop: true
    }
-
- 
   ]
 
+ 
+  
 
-
-  constructor() { }
+constructor() { }
   
   ngOnInit(): void {
   }
