@@ -23,14 +23,19 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  //Juan's logic
   userLogin(){
     var currentUser = this.userList.find(user => user.email == this.loginUser.email)
-    if(currentUser.password === this.loginUser.password){
-       this.router.navigate(['profile/user/' + currentUser.id])
-    } else {
-      alert('Wrong User Information')
-    }  
-   }
+    if(currentUser === undefined){
+      alert("No User with this Email")
+    } else{
+      if(currentUser.password === this.loginUser.password){
+        this.router.navigate(['profile/user/' + currentUser.id])
+      } else {
+      alert('Wrong Password')
+      }
+    }    
+  }
 
 
 

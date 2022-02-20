@@ -24,10 +24,14 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
 
   }
-
+  // Juan's logic
   postUser() {
     this.userService.postUser(this.newUser).subscribe((response) => {
-      this.router.navigate(['profile/user/' + (this.newUser.id)])
+      this.userService.getAllUsers().subscribe((users) => {
+        var currentUser = users.find((user) => user.email == this.newUser.email);
+        this.newUser.id = currentUser.id
+        this.router.navigate(['profile/user/' + (this.newUser.id)])
+      })
     });
   }
 

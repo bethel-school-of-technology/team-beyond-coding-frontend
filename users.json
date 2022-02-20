@@ -17,15 +17,6 @@
     "name": "typicode"
   },
   "users": [
-    {
-      "firstName": "Juan",
-      "lastName": "Oli",
-      "email": "potato@gmail.com",
-      "age": 33,
-      "city": "hastings",
-      "state": "mn",
-      "password": "test",
-      "id": 1
-    }
+    
   ]
 }
