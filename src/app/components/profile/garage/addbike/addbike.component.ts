@@ -30,7 +30,8 @@ export class AddbikeComponent implements OnInit {
     this.newBike.userId = this.currentId;
     this.myBikeService.addBike(this.newBike).subscribe((response) => {
       this.myBikeService.refreshBikes$.next(true);
-      this.router.navigate(['profile/user/' + this.currentId + '/bike/' + (this.bikeList.length + 1)])
+      let lastBike = this.bikeList[this.bikeList.length -1]
+      this.router.navigate(['profile/user/' + this.currentId + '/bike/' + (lastBike.id + 1)])
     });
   }
 }

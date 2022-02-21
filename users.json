@@ -9,22 +9,50 @@
       "state": "test",
       "password": "test",
       "id": 1
+    },
+    {
+      "firstName": "test2",
+      "lastName": "test2last",
+      "email": "test2@test.com",
+      "age": 2,
+      "city": "test",
+      "state": "test",
+      "password": "test",
+      "id": 2
     }
   ],
   "bikes": [
     {
       "type": "Cruiser",
-      "make": "artica",
-      "model": "ice-blue",
+      "make": "russia",
+      "model": "S87mx",
       "engineSize": "900cc",
-      "id": 1
+      "userId": 1,
+      "id": 7
     },
     {
-      "type": "Scooter",
-      "make": "china",
-      "model": "cheapa",
-      "engineSize": "small",
-      "id": 2
+      "type": "Electric",
+      "make": "tesla",
+      "model": "model B",
+      "engineSize": "400cc",
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "type": "Sport-Tourer",
+      "make": "honda",
+      "model": "S87mx",
+      "engineSize": "800cc",
+      "userId": 1,
+      "id": 9
+    },
+    {
+      "type": "Sportbike",
+      "make": "russia",
+      "model": "ice-blue",
+      "engineSize": "900cc",
+      "userId": 2,
+      "id": 10
     }
   ]
 }

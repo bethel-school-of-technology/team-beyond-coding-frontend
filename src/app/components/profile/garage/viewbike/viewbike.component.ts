@@ -10,7 +10,7 @@ import { BikeService } from 'src/app/services/bike.service';
 })
 export class ViewbikeComponent implements OnInit {
   currentBike: Bike = new Bike();
-
+  userId:number;
   bikeID: number;
   currentId: number;
 
@@ -23,20 +23,22 @@ export class ViewbikeComponent implements OnInit {
   ngOnInit(): void {
     this.actRoute.params.subscribe(params => {
       this.bikeID = +params["bikeID"];
-
-    this.myBikeService.getOneBike(this.bikeID).subscribe((response) => {
+      this.myBikeService.getOneBike(this.bikeID).subscribe((response) => {
       this.currentBike = response;
+      this.currentId = response.userId;
+      //console.log(response.userId)
     });
    })
-   this.currentId = this.myBikeService.getOption();
   }
   deleteBike(id: number){
     this.myBikeService.deleteBike(id).subscribe(response => {
-      this.myBikeService.refreshBikes$.next(true);
       this.router.navigate(["profile/user/" + this.currentId])
+      this.myBikeService.refreshBikes$.next(true);
     })
+    //console.log(this.currentId)
   }
   navigateTo(){
     this.router.navigate(['profile/user/'+ this.currentId +'/update/bike/' + this.bikeID])
+    this.myBikeService.refreshBikes$.next(true);
   }
 }

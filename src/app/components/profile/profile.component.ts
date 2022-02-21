@@ -76,21 +76,30 @@ export class ProfileComponent implements OnInit {
     private userService : UsersService
   ) {}
 
+  
   ngOnInit(): void {
-    this.myBikeService.refreshBikes$.subscribe(() => {
-      this.myBikeService.getAllBikes().subscribe((response) => {
-        //console.log(response);
-        this.bikeList = response;
-      });
-    });
-
+    
+    //after login or signing up this allows the info to show up for the current user
     this.actRoute.params.subscribe((params) => {
       this.userId= params['id']
       this.userService.getOneUser(this.userId).subscribe((response) => {
         this.currentUser = response;
         this.myBikeService.setOption(this.currentUser.id);
       })
-  });
+    });
+
+    // this will make it so only user's bikes show
+    this.myBikeService.refreshBikes$.subscribe(() => {
+      this.myBikeService.getAllBikes().subscribe((response) => {
+        //console.log(response);
+        for (let i = 0; i < response.length; i++){
+          if (response[i].userId == this.userId) {
+            this.bikeList.push(response[i]) ;
+          }
+        }
+      });
+    });
+
   }
   toggle() {
     if (this.toggleData === 'Private') {
