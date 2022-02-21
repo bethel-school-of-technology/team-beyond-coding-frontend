@@ -6,7 +6,7 @@ header{
   display: flex;
   flex-direction: row;
   align-items: center;
-  background: transparent;
+  background: black;
  justify-content: space-between;
  flex-wrap: wrap;
  transition: 0.3s;
@@ -38,7 +38,7 @@ header{
       font-size: 12px;
      
   } 
-  .btn{
+  .button{
       font-size: 10px;
       justify-content: center;
       width: fit-content;
@@ -57,7 +57,7 @@ header{
       height: 300px;
      
   } 
-  .btn{
+  .button{
       font-size: 7px;
       justify-content: center;
       width: fit-content;
@@ -67,7 +67,7 @@ header{
 
 }
 
-.btn {
+.button {
   color: white;
   padding: 5px 10px;
   position: relative;
@@ -84,7 +84,7 @@ header{
   justify-content: center;
 
 }
-.btn::before {
+.button::before {
   content: '';
   display: block;
   width: 50px;
@@ -98,21 +98,21 @@ header{
   transition: 1s ease;
 }
 
-.btn::before {
+.button::before {
   top: -20px;
   left: -20px;
 }
 
-.btn:hover::before {
+.button:hover::before {
   height: 280px;
   width: 280px;
 }
 
-.btn:hover {
+.button:hover {
   color: white;
 }
 
-.btn:active {
+.button:active {
   filter: brightness(1.3);
 }
 
