@@ -27,6 +27,7 @@ export class AddbikeComponent implements OnInit {
   }
 
   addBike() {
+    this.newBike.userId = this.currentId;
     this.myBikeService.addBike(this.newBike).subscribe((response) => {
       this.myBikeService.refreshBikes$.next(true);
       this.router.navigate(['profile/user/' + this.currentId + '/bike/' + (this.bikeList.length + 1)])
