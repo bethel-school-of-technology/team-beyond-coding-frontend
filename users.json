@@ -13,11 +13,18 @@
   ],
   "bikes": [
     {
-      "type": "Sportbike",
-      "make": "russia",
+      "type": "Cruiser",
+      "make": "artica",
       "model": "ice-blue",
       "engineSize": "900cc",
       "id": 1
+    },
+    {
+      "type": "Scooter",
+      "make": "china",
+      "model": "cheapa",
+      "engineSize": "small",
+      "id": 2
     }
   ]
 }
