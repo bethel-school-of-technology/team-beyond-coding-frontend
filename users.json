@@ -24,22 +24,6 @@
   "bikes": [
     {
       "type": "Cruiser",
-      "make": "china",
-      "model": "S87mx",
-      "engineSize": "slow",
-      "userId": 2,
-      "id": 2
-    },
-    {
-      "type": "Sport-Tourer",
-      "make": "Peru",
-      "model": "S87mx",
-      "engineSize": "800cc",
-      "userId": 2,
-      "id": 3
-    },
-    {
-      "type": "Cruiser",
       "make": "russia",
       "model": "S87mx",
       "engineSize": "900cc",
@@ -61,6 +45,14 @@
       "engineSize": "800cc",
       "userId": 1,
       "id": 9
+    },
+    {
+      "type": "Sportbike",
+      "make": "russia",
+      "model": "ice-blue",
+      "engineSize": "900cc",
+      "userId": 2,
+      "id": 10
     }
   ]
 }
