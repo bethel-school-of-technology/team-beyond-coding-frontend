@@ -6,21 +6,18 @@ header{
   display: flex;
   flex-direction: row;
   align-items: center;
-  background: #EDF2F4;
+  background: transparent;
  justify-content: space-between;
+ flex-wrap: wrap;
+ transition: 0.3s;
 }
 
 .button-container{
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding: 10px;
 }
-
-.icon-container{
-  justify-content: flex-end;
-  align-items: center;
-}
-
 
 
 .group-ride-text {
@@ -32,11 +29,6 @@ header{
 
 }
 
-
-.fa-bars{
-  display: flex-end;
-
-}
 
 @media screen and (max-width: 768px) and (min-width: 420px){
   .header{

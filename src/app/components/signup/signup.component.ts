@@ -39,24 +39,6 @@ export class SignupComponent implements OnInit {
     console.log(this.newUser.id);
   }
 
-  // postUserDetails(){
-  //   this.newUser.firstName = firstName;
-  //   this.newUser.lastName = this.user.value.lastName;
-  //   this.newUser.email = this.signupForm.value.email;
-  //   this.newUser.age = this.signupForm.value.age;
-  //   this.newUser.city = this.signupForm.value.city;
-  //   this.newUser.state = this.signupForm.value.state;
-  //   this.newUser.password = this.signupForm.value.password;
-  
-  //   this.userService.postUser(this.newUser).subscribe(res=>{
-  //     console.log(res);
-  //     alert("User Added Successfully!")
-  //     this.router.navigate(["profile/users/"])
-  //   },
-  //   err=>{
-  //     alert("Something went wrong.")
-  //   })
-  // }
 
 
   }
