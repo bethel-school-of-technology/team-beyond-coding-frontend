@@ -29,14 +29,19 @@ export class ViewbikeComponent implements OnInit {
     });
    })
    this.currentId = this.myBikeService.getOption();
+   console.log(this.currentId)
   }
   deleteBike(id: number){
     this.myBikeService.deleteBike(id).subscribe(response => {
       this.myBikeService.refreshBikes$.next(true);
+      this.currentId = this.myBikeService.getOption();
       this.router.navigate(["profile/user/" + this.currentId])
     })
+    console.log(this.currentId)
   }
   navigateTo(){
-    this.router.navigate(['profile/user/'+ this.currentId +'/update/bike/' + this.bikeID])
+    //this.router.navigate(['profile/user/'+ this.currentId +'/update/bike/' + this.bikeID])
+    //this.currentId = this.myBikeService.getOption();
+    console.log(this.currentId)
   }
 }

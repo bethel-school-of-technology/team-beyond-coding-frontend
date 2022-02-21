@@ -80,7 +80,11 @@ export class ProfileComponent implements OnInit {
     this.myBikeService.refreshBikes$.subscribe(() => {
       this.myBikeService.getAllBikes().subscribe((response) => {
         //console.log(response);
-        this.bikeList = response;
+        for (let i = 0; i < response.length; i++){
+          if (response[i].userId == this.userId) {
+            this.bikeList.push(response[i]) ;
+          }
+        }
       });
     });
 
