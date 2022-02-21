@@ -13,21 +13,23 @@ export class AddbikeComponent implements OnInit {
   newBike: Bike = new Bike();
 
   bikeList: Bike[] = [];
-
+  currentId: number;
 
   constructor(private myBikeService: BikeService, private router: Router) {}
 
   ngOnInit(): void {
     this.myBikeService.getAllBikes().subscribe((response) => {
-      console.log(response);
+      //console.log(response);
       this.bikeList = response;
     });
+    this.currentId = this.myBikeService.getOption();
+    
   }
 
   addBike() {
     this.myBikeService.addBike(this.newBike).subscribe((response) => {
       this.myBikeService.refreshBikes$.next(true);
-      this.router.navigate(['profile/bike/' + (this.bikeList.length + 1)])
+      this.router.navigate(['profile/user/' + this.currentId + '/bike/' + (this.bikeList.length + 1)])
     });
   }
 }

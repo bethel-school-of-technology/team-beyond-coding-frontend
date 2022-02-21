@@ -4,4 +4,5 @@ export class Bike {
     make:any;
     model:any;
     engineSize:any;
+    userId:number;
 }
